@@ -1,0 +1,12 @@
+E:\Faculta\SD\Assginment2\FakeMoodle\DataContrcts\bin\Debug\DataContrcts.dll
+E:\Faculta\SD\Assginment2\FakeMoodle\DataContrcts\bin\Debug\DataContrcts.pdb
+E:\Faculta\SD\Assginment2\FakeMoodle\DataContrcts\obj\Debug\DataContracts.csproj.CoreCompileInputs.cache
+E:\Faculta\SD\Assginment2\FakeMoodle\DataContrcts\obj\Debug\DataContrcts.dll
+E:\Faculta\SD\Assginment2\FakeMoodle\DataContrcts\obj\Debug\DataContrcts.pdb
+E:\Faculta\SD\Assginment2\FakeMoodle\DataContrcts\obj\Debug\DataContracts.csprojResolveAssemblyReference.cache
+C:\Users\Arbeit macht frei!\Desktop\FakeMoodle\DataContrcts\bin\Debug\DataContrcts.dll
+C:\Users\Arbeit macht frei!\Desktop\FakeMoodle\DataContrcts\bin\Debug\DataContrcts.pdb
+C:\Users\Arbeit macht frei!\Desktop\FakeMoodle\DataContrcts\obj\Debug\DataContracts.csprojResolveAssemblyReference.cache
+C:\Users\Arbeit macht frei!\Desktop\FakeMoodle\DataContrcts\obj\Debug\DataContracts.csproj.CoreCompileInputs.cache
+C:\Users\Arbeit macht frei!\Desktop\FakeMoodle\DataContrcts\obj\Debug\DataContrcts.dll
+C:\Users\Arbeit macht frei!\Desktop\FakeMoodle\DataContrcts\obj\Debug\DataContrcts.pdb
