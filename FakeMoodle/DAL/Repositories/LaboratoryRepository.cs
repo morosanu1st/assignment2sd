@@ -16,9 +16,9 @@ namespace DAL.Repositories
 
         public List<LaboratoryDto> Search(string q)
         {
-            return Context.Laboratories.Include(x => x.Assignment).Where(x => x.Curricula.Contains(q) 
-            || x.Description.Contains(q) || x.Title.Contains(q) || x.Assignment.Description.Contains(q) 
-            || x.Assignment.Name.Contains(q)).ToList();
+            return Context.Laboratories.Include(x => x.Assignments).Where(x => x.Curricula.Contains(q)
+            || x.Description.Contains(q) || x.Title.Contains(q) || x.Assignments.Aggregate(false, ((accumulator, assignment) => assignment.Description.Contains(q) || assignment.Name.Contains(q) || accumulator))
+            ).ToList();
 
         }
     }
