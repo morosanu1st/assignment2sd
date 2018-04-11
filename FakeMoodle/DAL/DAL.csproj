@@ -58,6 +58,7 @@
     <Compile Include="Repositories\AttendanceRepository.cs" />
     <Compile Include="Repositories\GenericRepository.cs" />
     <Compile Include="Repositories\LaboratoryRepository.cs" />
+    <Compile Include="Repositories\SubmissionRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>

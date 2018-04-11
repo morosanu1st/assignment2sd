@@ -10,3 +10,9 @@ C:\Users\Arbeit macht frei!\Desktop\FakeMoodle\DataContrcts\obj\Debug\DataContra
 C:\Users\Arbeit macht frei!\Desktop\FakeMoodle\DataContrcts\obj\Debug\DataContracts.csproj.CoreCompileInputs.cache
 C:\Users\Arbeit macht frei!\Desktop\FakeMoodle\DataContrcts\obj\Debug\DataContrcts.dll
 C:\Users\Arbeit macht frei!\Desktop\FakeMoodle\DataContrcts\obj\Debug\DataContrcts.pdb
+C:\faculta\FakeMoodle\DataContrcts\bin\Debug\DataContrcts.dll
+C:\faculta\FakeMoodle\DataContrcts\bin\Debug\DataContrcts.pdb
+C:\faculta\FakeMoodle\DataContrcts\obj\Debug\DataContracts.csprojResolveAssemblyReference.cache
+C:\faculta\FakeMoodle\DataContrcts\obj\Debug\DataContracts.csproj.CoreCompileInputs.cache
+C:\faculta\FakeMoodle\DataContrcts\obj\Debug\DataContrcts.dll
+C:\faculta\FakeMoodle\DataContrcts\obj\Debug\DataContrcts.pdb

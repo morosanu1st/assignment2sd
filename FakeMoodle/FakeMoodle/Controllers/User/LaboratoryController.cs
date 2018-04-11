@@ -38,6 +38,8 @@ namespace FakeMoodle.Controllers.User
         {
             repo.Add(new UserDto { UserName = "moro", PasswordHash = "asdasd", Email = "asldknnads", Name = "Chindriș Mihai", Group = 30431, Hobby = "Almost Dying" });
             repo.Save();
+            repo.Edit(new UserDto { Id = 1, UserName = "morosanu", PasswordHash = "asdasd", Email = "asldknnads", Name = "Chindriș Mihai", Group = 30431, Hobby = "Almost Dying" });
+            repo.Save();
             var res = repo.GetById(1);
             return "noneFound";
         }

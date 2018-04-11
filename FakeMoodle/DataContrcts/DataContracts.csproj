@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAttendanceRepository.cs" />
     <Compile Include="IGenericRepository.cs" />
     <Compile Include="ILaboratoryRepository.cs" />
+    <Compile Include="ISubmissionRepository.cs" />
     <Compile Include="IUserRepository.cs" />
     <Compile Include="Models\AbstractDto.cs" />
     <Compile Include="Models\AssignmentDto.cs" />

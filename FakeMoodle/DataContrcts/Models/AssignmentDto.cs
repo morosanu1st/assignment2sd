@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataContracts.Models
@@ -6,7 +7,8 @@ namespace DataContracts.Models
     [Table("Assignments")]
     public class AssignmentDto : AbstractDto
     {
-        public  int LaboratoryId { get; set; }
+        public int LaboratoryId { get; set; }
+        [ForeignKey("LaboratoryId")]
         public LaboratoryDto Laboratory { get; set; }
 
         public string Name { get; set; }
@@ -14,5 +16,12 @@ namespace DataContracts.Models
         public DateTime DueDate { get; set; }
 
         public string Description { get; set; }
+
+        public IEnumerable<SubmissionDto> Submissions { get; set; }
+
+        public AssignmentDto()
+        {
+            Submissions = new HashSet<SubmissionDto>();
+        }
     }
 }

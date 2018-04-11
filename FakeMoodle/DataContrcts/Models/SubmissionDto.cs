@@ -9,14 +9,16 @@ namespace DataContracts.Models
         [ForeignKey("StudentId")]
         public UserDto Student { get; set; }
 
-        public int LaboratoryId { get; set; }
-        [ForeignKey("LaboratoryId")]
-        public LaboratoryDto Laboratory { get; set; }
+        public int AssignmentId { get; set; }
+        [ForeignKey("AssignmentId")]
+        public AssignmentDto Assignment { get; set; }
 
         public string Remarks { get; set; }
 
         public string Link { get; set; }
 
         public int Grade { get; set; }
+
+        public int Attempt { get; set; }
     }
 }

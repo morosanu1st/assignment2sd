@@ -18,8 +18,8 @@ namespace DataContracts.Models
 
         public string Description { get; set; }
 
-        public int AssignmentId { get; set; }
-        public AssignmentDto Assignment { get; set; }
+       
+        public IEnumerable<AssignmentDto> Assignments { get; set; }
 
         public IEnumerable<AttendanceDto> Attendances { get; set; }
 
@@ -29,6 +29,7 @@ namespace DataContracts.Models
         {
             Attendances = new HashSet<AttendanceDto>();
             Submissions = new HashSet<SubmissionDto>();
+            Assignments = new HashSet<AssignmentDto>();
         }
 
     }

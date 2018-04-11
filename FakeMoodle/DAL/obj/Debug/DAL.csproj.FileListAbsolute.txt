@@ -29,3 +29,18 @@ C:\Users\Arbeit macht frei!\Desktop\FakeMoodle\DAL\obj\Debug\DAL.csproj.CoreComp
 C:\Users\Arbeit macht frei!\Desktop\FakeMoodle\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\Arbeit macht frei!\Desktop\FakeMoodle\DAL\obj\Debug\DAL.dll
 C:\Users\Arbeit macht frei!\Desktop\FakeMoodle\DAL\obj\Debug\DAL.pdb
+C:\faculta\FakeMoodle\DAL\bin\Debug\DAL.dll.config
+C:\faculta\FakeMoodle\DAL\bin\Debug\DAL.dll
+C:\faculta\FakeMoodle\DAL\bin\Debug\DAL.pdb
+C:\faculta\FakeMoodle\DAL\bin\Debug\DataContrcts.dll
+C:\faculta\FakeMoodle\DAL\bin\Debug\EntityFramework.dll
+C:\faculta\FakeMoodle\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\faculta\FakeMoodle\DAL\bin\Debug\DataContrcts.pdb
+C:\faculta\FakeMoodle\DAL\bin\Debug\EntityFramework.xml
+C:\faculta\FakeMoodle\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\faculta\FakeMoodle\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\faculta\FakeMoodle\DAL\obj\Debug\DAL.Migrations.initialMigration.resources
+C:\faculta\FakeMoodle\DAL\obj\Debug\DAL.csproj.GenerateResource.Cache
+C:\faculta\FakeMoodle\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\faculta\FakeMoodle\DAL\obj\Debug\DAL.dll
+C:\faculta\FakeMoodle\DAL\obj\Debug\DAL.pdb

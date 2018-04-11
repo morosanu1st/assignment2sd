@@ -45,6 +45,7 @@ namespace DIL
             // TODO: Register your type's mappings here.
             container.RegisterType<ModelContext>();
             container.RegisterType<IUserRepository, UserRepository>();
+            container.RegisterType<ISubmissionRepository, SubmissionRepository>();
         }
     }
 }

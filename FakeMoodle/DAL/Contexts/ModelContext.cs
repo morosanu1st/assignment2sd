@@ -28,8 +28,7 @@ namespace DAL.Contexts
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<LaboratoryDto>().HasOptional(x => x.Assignment).WithRequired(x => x.Laboratory);
+            base.OnModelCreating(modelBuilder);           
         }
     }
 }
