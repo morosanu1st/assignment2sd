@@ -15,7 +15,7 @@ namespace DAL.Repositories
 
         public List<UserDto> Search(string q)
         {
-            return FindBy(x => x.UserName.Contains(q) || x.Name.Contains(q)).ToList();
+            return FindBy(x => x.UserName.Contains(q) || x.Name.Contains(q) || x.Email.Contains(q)).ToList();
         }
 
         public List<UserDto> GetGroup(int group)

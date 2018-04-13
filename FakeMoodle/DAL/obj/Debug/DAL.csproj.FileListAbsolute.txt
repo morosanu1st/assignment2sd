@@ -12,8 +12,6 @@ E:\Faculta\SD\Assginment2\FakeMoodle\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.
 E:\Faculta\SD\Assginment2\FakeMoodle\DAL\obj\Debug\DAL.csproj.CopyComplete
 E:\Faculta\SD\Assginment2\FakeMoodle\DAL\obj\Debug\DAL.dll
 E:\Faculta\SD\Assginment2\FakeMoodle\DAL\obj\Debug\DAL.pdb
-E:\Faculta\SD\Assginment2\FakeMoodle\DAL\obj\Debug\DAL.Migrations.initialMigration.resources
-E:\Faculta\SD\Assginment2\FakeMoodle\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
 C:\Users\Arbeit macht frei!\Desktop\FakeMoodle\DAL\bin\Debug\DAL.dll.config
 C:\Users\Arbeit macht frei!\Desktop\FakeMoodle\DAL\bin\Debug\DAL.dll
 C:\Users\Arbeit macht frei!\Desktop\FakeMoodle\DAL\bin\Debug\DAL.pdb
@@ -44,3 +42,5 @@ C:\faculta\FakeMoodle\DAL\obj\Debug\DAL.csproj.GenerateResource.Cache
 C:\faculta\FakeMoodle\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\faculta\FakeMoodle\DAL\obj\Debug\DAL.dll
 C:\faculta\FakeMoodle\DAL\obj\Debug\DAL.pdb
+E:\Faculta\SD\Assginment2\FakeMoodle\DAL\obj\Debug\DAL.Migrations.InitialMigration.resources
+E:\Faculta\SD\Assginment2\FakeMoodle\DAL\obj\Debug\DAL.csproj.GenerateResource.cache

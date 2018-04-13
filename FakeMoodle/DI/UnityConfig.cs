@@ -46,6 +46,9 @@ namespace DIL
             container.RegisterType<ModelContext>();
             container.RegisterType<IUserRepository, UserRepository>();
             container.RegisterType<ISubmissionRepository, SubmissionRepository>();
+            container.RegisterType<ILaboratoryRepository, LaboratoryRepository>();
+            container.RegisterType<IAttendanceRepository, AttendanceRepository>();
+            container.RegisterType<IAssignmentRepository, AssignmentRepository>();
         }
     }
 }

@@ -3,7 +3,7 @@ namespace DAL.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initialMigration : DbMigration
+    public partial class InitialMigration : DbMigration
     {
         public override void Up()
         {
@@ -30,23 +30,8 @@ namespace DAL.Migrations
                         Title = c.String(),
                         Curricula = c.String(),
                         Description = c.String(),
-                        AssignmentId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
-            
-            CreateTable(
-                "dbo.Assignments",
-                c => new
-                    {
-                        Id = c.Int(nullable: false),
-                        LaboratoryId = c.Int(nullable: false),
-                        Name = c.String(),
-                        DueDate = c.DateTime(nullable: false),
-                        Description = c.String(),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Laboratories", t => t.Id)
-                .Index(t => t.Id);
             
             CreateTable(
                 "dbo.Users",
@@ -69,15 +54,30 @@ namespace DAL.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         StudentId = c.Int(nullable: false),
-                        LaboratoryId = c.Int(nullable: false),
+                        AssignmentId = c.Int(nullable: false),
                         Remarks = c.String(),
                         Link = c.String(),
                         Grade = c.Int(nullable: false),
+                        Attempt = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Assignments", t => t.AssignmentId, cascadeDelete: true)
+                .ForeignKey("dbo.Users", t => t.StudentId, cascadeDelete: true)
+                .Index(t => t.StudentId)
+                .Index(t => t.AssignmentId);
+            
+            CreateTable(
+                "dbo.Assignments",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        LaboratoryId = c.Int(nullable: false),
+                        Name = c.String(),
+                        DueDate = c.DateTime(nullable: false),
+                        Description = c.String(),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Laboratories", t => t.LaboratoryId, cascadeDelete: true)
-                .ForeignKey("dbo.Users", t => t.StudentId, cascadeDelete: true)
-                .Index(t => t.StudentId)
                 .Index(t => t.LaboratoryId);
             
         }
@@ -85,18 +85,18 @@ namespace DAL.Migrations
         public override void Down()
         {
             DropForeignKey("dbo.Submissions", "StudentId", "dbo.Users");
-            DropForeignKey("dbo.Submissions", "LaboratoryId", "dbo.Laboratories");
+            DropForeignKey("dbo.Submissions", "AssignmentId", "dbo.Assignments");
+            DropForeignKey("dbo.Assignments", "LaboratoryId", "dbo.Laboratories");
             DropForeignKey("dbo.Attendances", "UserId", "dbo.Users");
             DropForeignKey("dbo.Attendances", "LaboratoryId", "dbo.Laboratories");
-            DropForeignKey("dbo.Assignments", "Id", "dbo.Laboratories");
-            DropIndex("dbo.Submissions", new[] { "LaboratoryId" });
+            DropIndex("dbo.Assignments", new[] { "LaboratoryId" });
+            DropIndex("dbo.Submissions", new[] { "AssignmentId" });
             DropIndex("dbo.Submissions", new[] { "StudentId" });
-            DropIndex("dbo.Assignments", new[] { "Id" });
             DropIndex("dbo.Attendances", new[] { "UserId" });
             DropIndex("dbo.Attendances", new[] { "LaboratoryId" });
+            DropTable("dbo.Assignments");
             DropTable("dbo.Submissions");
             DropTable("dbo.Users");
-            DropTable("dbo.Assignments");
             DropTable("dbo.Laboratories");
             DropTable("dbo.Attendances");
         }
