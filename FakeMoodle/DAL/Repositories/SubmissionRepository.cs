@@ -12,14 +12,14 @@ namespace DAL.Repositories
 {
     public class SubmissionRepository : GenericRepository<ModelContext, SubmissionDto>, ISubmissionRepository
     {
-        public List<SubmissionDto> GetByStudent(UserDto s)
+        public IQueryable<SubmissionDto> GetByStudent(UserDto s)
         {
-            return FindBy(x => x.StudentId == s.Id).ToList();
+            return FindBy(x => x.StudentId == s.Id);
         }
 
-        public List<SubmissionDto> GetByLab(AssignmentDto a)
+        public IQueryable<SubmissionDto> GetByLab(AssignmentDto a)
         {
-            return FindBy(x => x.AssignmentId == a.Id).ToList();
+            return FindBy(x => x.AssignmentId == a.Id);
         }
 
         public SubmissionDto GetSpecificSubmission(UserDto s, AssignmentDto a)

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace BussinessContracts.Models
 {
@@ -12,6 +13,7 @@ namespace BussinessContracts.Models
 
         public string Description { get; set; }
 
+        public DateTime Date { get; set; }
 
         public IEnumerable<AssignmentModel> Assignments { get; set; }
 

@@ -53,6 +53,22 @@
     <Compile Include="Migrations\201804111442450_InitialMigration.Designer.cs">
       <DependentUpon>201804111442450_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804160956407_addedDate.cs" />
+    <Compile Include="Migrations\201804160956407_addedDate.Designer.cs">
+      <DependentUpon>201804160956407_addedDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804231226257_userModelUpdate.cs" />
+    <Compile Include="Migrations\201804231226257_userModelUpdate.Designer.cs">
+      <DependentUpon>201804231226257_userModelUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804231426474_userModelUpdate1.cs" />
+    <Compile Include="Migrations\201804231426474_userModelUpdate1.Designer.cs">
+      <DependentUpon>201804231426474_userModelUpdate1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804231719245_EnumerableToCollecction.cs" />
+    <Compile Include="Migrations\201804231719245_EnumerableToCollecction.Designer.cs">
+      <DependentUpon>201804231719245_EnumerableToCollecction.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AssignmentRepository.cs" />
@@ -75,6 +91,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201804111442450_InitialMigration.resx">
       <DependentUpon>201804111442450_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804160956407_addedDate.resx">
+      <DependentUpon>201804160956407_addedDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804231226257_userModelUpdate.resx">
+      <DependentUpon>201804231226257_userModelUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804231426474_userModelUpdate1.resx">
+      <DependentUpon>201804231426474_userModelUpdate1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804231719245_EnumerableToCollecction.resx">
+      <DependentUpon>201804231719245_EnumerableToCollecction.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -10,17 +10,20 @@ using System.Threading.Tasks;
 namespace DAL.Repositories
 {
     public class UserRepository : GenericRepository<ModelContext, UserDto>, IUserRepository
-    {
-
-
-        public List<UserDto> Search(string q)
+    {      
+        public IQueryable<UserDto> Search(string q)
         {
-            return FindBy(x => x.UserName.Contains(q) || x.Name.Contains(q) || x.Email.Contains(q)).ToList();
+            return FindBy( x=>x.Name.Contains(q) || x.Email.Contains(q));
         }
 
-        public List<UserDto> GetGroup(int group)
+        public IQueryable<UserDto> GetGroup(int group)
         {
-            return FindBy(x => x.Group == group).ToList();
+            return FindBy(x => x.Group == group);
+        }
+
+        public UserDto GetByEmail(string email)
+        {
+            return FindBy(x => x.Email.ToLower() == email.ToLower()).FirstOrDefault();
         }
     }
 }

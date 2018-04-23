@@ -13,11 +13,11 @@ namespace BussinessContracts
 
         void EditStudent(UserModel student);
 
-        void DeleteStudent(UserModel student);
+        bool DeleteStudent(int studentId);
 
         IEnumerable<UserModel> GetAllStudents();
 
-        IEnumerable<UserModel> GetStudentsByGroup();
+        IEnumerable<UserModel> GetStudentsByGroup(int id);
 
         UserModel GetStudent(int id);
 

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace BussinessContracts.Models
 {
-    public class AssignmentModel:AbstractModel
+    public class AssignmentModel : AbstractModel
     {
-       
+
         public LaboratoryModel Laboratory { get; set; }
 
         public string Name { get; set; }

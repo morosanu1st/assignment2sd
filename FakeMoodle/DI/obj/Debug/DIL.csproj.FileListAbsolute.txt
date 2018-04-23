@@ -132,3 +132,9 @@ C:\faculta\FakeMoodle\DI\obj\Debug\DIL.csprojResolveAssemblyReference.cache
 C:\faculta\FakeMoodle\DI\obj\Debug\DIL.csproj.CoreCompileInputs.cache
 C:\faculta\FakeMoodle\DI\obj\Debug\DI.dll
 C:\faculta\FakeMoodle\DI\obj\Debug\DI.pdb
+C:\faculta\FakeMoodle\DI\bin\Debug\AutoMapper.dll
+C:\faculta\FakeMoodle\DI\bin\Debug\BussinessContracts.dll
+C:\faculta\FakeMoodle\DI\bin\Debug\BussinessContracts.pdb
+C:\faculta\FakeMoodle\DI\bin\Debug\AutoMapper.xml
+C:\faculta\FakeMoodle\DI\bin\Debug\BLL.dll
+C:\faculta\FakeMoodle\DI\bin\Debug\BLL.pdb

@@ -14,16 +14,18 @@ namespace DataContracts.Models
 
         public string Title { get; set; }
 
+        public DateTime Date { get; set; }
+
         public string Curricula { get; set; }
 
         public string Description { get; set; }
 
        
-        public IEnumerable<AssignmentDto> Assignments { get; set; }
+        public ICollection<AssignmentDto> Assignments { get; set; }
 
-        public IEnumerable<AttendanceDto> Attendances { get; set; }
+        public ICollection<AttendanceDto> Attendances { get; set; }
 
-        public IEnumerable<SubmissionDto> Submissions { get; set; }
+        public ICollection<SubmissionDto> Submissions { get; set; }
 
         public LaboratoryDto()
         {

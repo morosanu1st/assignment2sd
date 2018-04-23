@@ -9,10 +9,9 @@ namespace BussinessContracts
 {
     public interface IAuthService
     {
-        string CreateUser(UserModel student);
 
-        UserModel FirstLogin(string username,string token);
+        string FirstLogin(string email,string token,string passwordHash);
 
-        UserModel Login(string username, string passwordHash);
+        string Login(string username, string passwordHash);
     }
 }

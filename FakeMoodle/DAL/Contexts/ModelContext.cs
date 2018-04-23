@@ -26,6 +26,8 @@ namespace DAL.Contexts
 
         public DbSet<LaboratoryDto> Laboratories { get; set; }
 
+        public DbSet<AssignmentDto> Assignments { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);           

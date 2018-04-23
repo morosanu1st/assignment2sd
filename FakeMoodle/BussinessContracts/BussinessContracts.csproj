@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,15 +42,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IAssignmentService.cs" />
+    <Compile Include="IAttendanceService.cs" />
     <Compile Include="IAuthService.cs" />
-    <Compile Include="ILaboratoryManagementService.cs" />
+    <Compile Include="ILaboratoryService.cs" />
     <Compile Include="IStudentManagementService.cs" />
+    <Compile Include="ISubmissionService.cs" />
     <Compile Include="Models\AbstractModel.cs" />
     <Compile Include="Models\AssignmentModel.cs" />
     <Compile Include="Models\AttendanceModel.cs" />
     <Compile Include="Models\LaboratoryModel.cs" />
     <Compile Include="Models\SubmissionModel.cs" />
     <Compile Include="Models\UserModel.cs" />
+    <Compile Include="PasswordHasher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

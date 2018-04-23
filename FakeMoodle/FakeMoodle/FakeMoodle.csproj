@@ -169,12 +169,17 @@
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\UnityResolver.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\User\LaboratoryController.cs" />
+    <Compile Include="Controllers\Admin\LaboratoryController.cs" />
+    <Compile Include="Controllers\Admin\StudentController.cs" />
+    <Compile Include="Controllers\User\LoginController.cs" />
+    <Compile Include="Controllers\User\RegisterController.cs" />
     <Compile Include="Filters\CustomAuthFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\LoginModel.cs" />
+    <Compile Include="ViewModel\RegistrationModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -209,8 +214,10 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\" />
-    <Folder Include="Controllers\Admin\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Login\" />
+    <Folder Include="Views\Register\" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -226,6 +233,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BussinessContracts\BussinessContracts.csproj">
+      <Project>{7B4E7D88-B6D0-4C6C-A206-83E058FE64D9}</Project>
+      <Name>BussinessContracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{B595F629-043A-45BC-8318-8C6018E5D066}</Project>
       <Name>DAL</Name>

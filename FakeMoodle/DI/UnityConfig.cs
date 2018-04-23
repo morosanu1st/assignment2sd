@@ -1,3 +1,5 @@
+using BLL.Services;
+using BussinessContracts;
 using DAL.Contexts;
 using DAL.Repositories;
 using DataContracts;
@@ -49,6 +51,9 @@ namespace DIL
             container.RegisterType<ILaboratoryRepository, LaboratoryRepository>();
             container.RegisterType<IAttendanceRepository, AttendanceRepository>();
             container.RegisterType<IAssignmentRepository, AssignmentRepository>();
+            container.RegisterType<IStudentManagementService, StudentManagementService>();
+            container.RegisterType<IAuthService, AuthService>();
+            container.RegisterType<ILaboratoryService, LaboratoryService>();
         }
     }
 }

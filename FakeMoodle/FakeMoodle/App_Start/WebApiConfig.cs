@@ -13,6 +13,7 @@ namespace FakeMoodle
         {
             // Web API configuration and services
             config.DependencyResolver = new UnityResolver(UnityConfig.Container);
+            AutoMapperConfig.Initialize();
 
             // Web API routes
             config.MapHttpAttributeRoutes();

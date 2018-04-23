@@ -6,7 +6,6 @@ namespace DataContracts.Models
     [Table("Users")]
     public class UserDto : AbstractDto
     {
-        public string UserName { get; set; }
 
         public string PasswordHash { get; set; }
 
@@ -20,9 +19,11 @@ namespace DataContracts.Models
 
         public bool IsAdmin { get; set; }
 
-        public IEnumerable<AttendanceDto> Attendances { get; set; }
+        public int Status { get; set; }
 
-        public IEnumerable<SubmissionDto> Submissions { get; set; }
+        public ICollection<AttendanceDto> Attendances { get; set; }
+
+        public ICollection<SubmissionDto> Submissions { get; set; }
 
         public UserDto()
         {

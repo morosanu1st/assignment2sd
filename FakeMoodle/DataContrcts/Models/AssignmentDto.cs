@@ -17,7 +17,7 @@ namespace DataContracts.Models
 
         public string Description { get; set; }
 
-        public IEnumerable<SubmissionDto> Submissions { get; set; }
+        public ICollection<SubmissionDto> Submissions { get; set; }
 
         public AssignmentDto()
         {

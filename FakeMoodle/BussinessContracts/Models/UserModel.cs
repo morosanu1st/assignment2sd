@@ -8,7 +8,6 @@ namespace BussinessContracts.Models
 {
     public class UserModel : AbstractModel
     {
-        public string UserName { get; set; }
 
         public string PasswordHash { get; set; }
 
@@ -21,6 +20,8 @@ namespace BussinessContracts.Models
         public int Group { get; set; }
 
         public bool IsAdmin { get; set; }
+
+        public int Status { get; set; }
 
         public IEnumerable<AttendanceModel> Attendances { get; set; }
 

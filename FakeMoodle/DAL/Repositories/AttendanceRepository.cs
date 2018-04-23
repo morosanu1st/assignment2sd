@@ -2,6 +2,7 @@
 using DataContracts;
 using DataContracts.Models;
 using System;
+using System.Data.Entity;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,21 +12,21 @@ namespace DAL.Repositories
 {
     public class AttendanceRepository : GenericRepository<ModelContext, AttendanceDto>, IAttendanceRepository
     {
-        public AttendanceDto GetSpecificAttendance(UserDto user,LaboratoryDto lab)
+        public AttendanceDto GetSpecificAttendance(UserDto user, LaboratoryDto lab)
         {
-            return Context.Attendances.Where(x=>x.UserId==user.Id&&lab.Id==x.LaboratoryId).FirstOrDefault();
+            return Context.Attendances.Include(x => x.Lab).Include(x => x.Student).Where(x => x.UserId == user.Id && lab.Id == x.LaboratoryId).FirstOrDefault<AttendanceDto>();
+        }
+
+        public override IQueryable<AttendanceDto> GetAll()
+        {
+            return Context.Attendances.Include(x => x.Lab).Include(x => x.Student);
         }
 
         public override void Add(AttendanceDto entity)
         {
-            var existing = GetSpecificAttendance(entity.Student, entity.Lab);
-            if(existing==null)
+            var existing = GetSpecificAttendance(new UserDto { Id = entity.UserId }, new LaboratoryDto { Id = entity.LaboratoryId });
+            if (existing == null)
                 base.Add(entity);
-            else
-            {
-                entity.Id = existing.Id;
-                base.Edit(entity);
-            }
         }
     }
 }

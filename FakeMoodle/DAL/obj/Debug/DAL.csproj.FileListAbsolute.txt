@@ -44,3 +44,7 @@ C:\faculta\FakeMoodle\DAL\obj\Debug\DAL.dll
 C:\faculta\FakeMoodle\DAL\obj\Debug\DAL.pdb
 E:\Faculta\SD\Assginment2\FakeMoodle\DAL\obj\Debug\DAL.Migrations.InitialMigration.resources
 E:\Faculta\SD\Assginment2\FakeMoodle\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+C:\faculta\FakeMoodle\DAL\obj\Debug\DAL.Migrations.addedDate.resources
+C:\faculta\FakeMoodle\DAL\obj\Debug\DAL.Migrations.userModelUpdate.resources
+C:\faculta\FakeMoodle\DAL\obj\Debug\DAL.Migrations.userModelUpdate1.resources
+C:\faculta\FakeMoodle\DAL\obj\Debug\DAL.Migrations.EnumerableToCollecction.resources

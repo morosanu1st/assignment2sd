@@ -231,3 +231,7 @@ C:\faculta\FakeMoodle\FakeMoodle\obj\Debug\FakeMoodle.csprojResolveAssemblyRefer
 C:\faculta\FakeMoodle\FakeMoodle\obj\Debug\FakeMoodle.csproj.CoreCompileInputs.cache
 C:\faculta\FakeMoodle\FakeMoodle\obj\Debug\FakeMoodle.dll
 C:\faculta\FakeMoodle\FakeMoodle\obj\Debug\FakeMoodle.pdb
+C:\faculta\FakeMoodle\FakeMoodle\bin\BussinessContracts.dll
+C:\faculta\FakeMoodle\FakeMoodle\bin\BussinessContracts.pdb
+C:\faculta\FakeMoodle\FakeMoodle\bin\BLL.dll
+C:\faculta\FakeMoodle\FakeMoodle\bin\BLL.pdb

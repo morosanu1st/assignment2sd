@@ -17,6 +17,6 @@ namespace BussinessContracts
 
         AssignmentModel GetAssignment(int id);
 
-        Assigne
+        IEnumerable<AssignmentModel> GetByLaboratory(int labId);
     }
 }
