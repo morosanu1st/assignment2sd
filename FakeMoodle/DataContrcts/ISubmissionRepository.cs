@@ -6,7 +6,7 @@ namespace DataContracts
 {
     public interface ISubmissionRepository : IGenericRepository<SubmissionDto>
     {
-        IQueryable<SubmissionDto> GetByLab(AssignmentDto l);
+        IQueryable<SubmissionDto> GetByAssignment(AssignmentDto l);
         IQueryable<SubmissionDto> GetByStudent(UserDto s);
         SubmissionDto GetSpecificSubmission(UserDto s, AssignmentDto l);
         new void Add(SubmissionDto entity);

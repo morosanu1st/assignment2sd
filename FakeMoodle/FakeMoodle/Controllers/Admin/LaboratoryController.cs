@@ -11,7 +11,6 @@ using System.Web.Http;
 namespace FakeMoodle.Controllers.Admin
 {
     [System.Web.Http.RoutePrefix("api/admin/laboratory")]
-
     public class LaboratoryController : ApiController
     {
         private ILaboratoryService labService;
@@ -42,7 +41,8 @@ namespace FakeMoodle.Controllers.Admin
             {
                 throw new Exception("invlid date format");
             }
-            return labService.GetByDate(d);
+            var ret= labService.GetByDate(d);
+            return ret;
         }
 
         [Route("number/{number}")]

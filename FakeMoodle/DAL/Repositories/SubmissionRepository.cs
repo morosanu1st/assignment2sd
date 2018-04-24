@@ -1,7 +1,7 @@
 ﻿using DAL.Contexts;
 using DataContracts;
 using DataContracts.Models;
-using System;
+using System.Data.Entity;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -14,17 +14,17 @@ namespace DAL.Repositories
     {
         public IQueryable<SubmissionDto> GetByStudent(UserDto s)
         {
-            return FindBy(x => x.StudentId == s.Id);
+            return Context.Submissions.Include(x => x.Student).Include(x => x.Assignment).Where(x => x.StudentId == s.Id);
         }
 
-        public IQueryable<SubmissionDto> GetByLab(AssignmentDto a)
+        public IQueryable<SubmissionDto> GetByAssignment(AssignmentDto a)
         {
-            return FindBy(x => x.AssignmentId == a.Id);
+            return Context.Submissions.Include(x => x.Student).Include(x => x.Assignment).Where(x => x.AssignmentId == a.Id);
         }
 
         public SubmissionDto GetSpecificSubmission(UserDto s, AssignmentDto a)
         {
-            return FindBy(x => x.StudentId == s.Id && x.AssignmentId == a.Id).FirstOrDefault();
+            return Context.Submissions.Include(x => x.Student).Include(x => x.Assignment).Where(x => x.StudentId == s.Id&&x.AssignmentId==a.Id).FirstOrDefault();
 
         }
 

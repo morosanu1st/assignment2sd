@@ -9,13 +9,13 @@ namespace BussinessContracts
 {
     public interface IAttendanceService
     {
-        void AddAttendance(AttendanceModel Attendance);
+        void AddAttendance(AttendanceModel attendance);
 
-        void EditAttendance(AttendanceModel Attendance);
-
-        void DeleteAttendance(AttendanceModel Attendance);
+        void DeleteAttendance(int attendanceId);
 
         AttendanceModel GetAttendance(int id);
+
+        IEnumerable<AttendanceModel> GetAll();
 
         IEnumerable<AttendanceModel> GetByLaboratory(int labId);
 

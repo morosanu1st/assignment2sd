@@ -9,6 +9,7 @@ using DataContracts;
 using BLL.Helpers;
 using AutoMapper;
 using DataContracts.Models;
+using BLL.Extensions;
 
 namespace BLL.Services
 {
@@ -77,7 +78,7 @@ namespace BLL.Services
 
         public UserModel GetStudent(int id)
         {
-            return Mapper.Map<UserModel>(userRepository.GetById(id));
+            return Mapper.Map<UserModel>(userRepository.GetById(id)).Trim();
         }
 
         public IEnumerable<UserModel> GetStudentsByGroup(int group)

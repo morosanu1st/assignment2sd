@@ -22,6 +22,11 @@ namespace DAL.Repositories
             return Context.Attendances.Include(x => x.Lab).Include(x => x.Student);
         }
 
+        public override AttendanceDto GetById(int id)
+        {
+            return Context.Attendances.Include(x => x.Lab).Include(x => x.Student).Where(x=>x.Id==id).FirstOrDefault();
+        }
+
         public override void Add(AttendanceDto entity)
         {
             var existing = GetSpecificAttendance(new UserDto { Id = entity.UserId }, new LaboratoryDto { Id = entity.LaboratoryId });

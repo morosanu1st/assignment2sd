@@ -16,5 +16,10 @@ namespace DAL.Repositories
         {
             return Context.Assignments.Include(x=>x.Laboratory).Include(x=>x.Submissions);
         }
+
+        public override AssignmentDto GetById(int id)
+        {
+            return Context.Assignments.Include(x => x.Laboratory).Include(x => x.Submissions).Where(x=>x.Id==id).FirstOrDefault();
+        }
     }
 }

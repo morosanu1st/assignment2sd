@@ -69,6 +69,10 @@
     <Compile Include="Migrations\201804231719245_EnumerableToCollecction.Designer.cs">
       <DependentUpon>201804231719245_EnumerableToCollecction.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804240952400_RemovedSubmissionFromLab.cs" />
+    <Compile Include="Migrations\201804240952400_RemovedSubmissionFromLab.Designer.cs">
+      <DependentUpon>201804240952400_RemovedSubmissionFromLab.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AssignmentRepository.cs" />
@@ -103,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804231719245_EnumerableToCollecction.resx">
       <DependentUpon>201804231719245_EnumerableToCollecction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804240952400_RemovedSubmissionFromLab.resx">
+      <DependentUpon>201804240952400_RemovedSubmissionFromLab.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

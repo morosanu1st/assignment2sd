@@ -54,6 +54,8 @@ namespace DIL
             container.RegisterType<IStudentManagementService, StudentManagementService>();
             container.RegisterType<IAuthService, AuthService>();
             container.RegisterType<ILaboratoryService, LaboratoryService>();
+            container.RegisterType<IAttendanceService, AttendanceService>();
+
         }
     }
 }

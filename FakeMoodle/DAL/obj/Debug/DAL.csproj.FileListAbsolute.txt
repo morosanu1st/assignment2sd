@@ -48,3 +48,4 @@ C:\faculta\FakeMoodle\DAL\obj\Debug\DAL.Migrations.addedDate.resources
 C:\faculta\FakeMoodle\DAL\obj\Debug\DAL.Migrations.userModelUpdate.resources
 C:\faculta\FakeMoodle\DAL\obj\Debug\DAL.Migrations.userModelUpdate1.resources
 C:\faculta\FakeMoodle\DAL\obj\Debug\DAL.Migrations.EnumerableToCollecction.resources
+C:\faculta\FakeMoodle\DAL\obj\Debug\DAL.Migrations.RemovedSubmissionFromLab.resources

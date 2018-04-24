@@ -8,6 +8,7 @@ using BussinessContracts.Models;
 using DataContracts;
 using AutoMapper;
 using DataContracts.Models;
+using BLL.Extensions;
 
 namespace BLL.Services
 {
@@ -74,27 +75,27 @@ namespace BLL.Services
 
         public IEnumerable<LaboratoryModel> GetAll()
         {
-            return Mapper.Map<LaboratoryDto[], IEnumerable<LaboratoryModel>>(labRepo.GetAll().ToArray());
+            return Mapper.Map<LaboratoryDto[], IEnumerable<LaboratoryModel>>(labRepo.GetAll().ToArray()).Select(x => x.Trim());
         }
 
         public LaboratoryModel GetByDate(DateTime date)
         {
-            return Mapper.Map<LaboratoryModel>(labRepo.GetByDate(date));
+            return Mapper.Map<LaboratoryModel>(labRepo.GetByDate(date)).Trim();
         }
 
         public LaboratoryModel GetByNumber(int number)
         {
-            return Mapper.Map<LaboratoryModel>(labRepo.GetByNumber(number));
+            return Mapper.Map<LaboratoryModel>(labRepo.GetByNumber(number)).Trim();
         }
 
         public LaboratoryModel GetLaboratory(int id)
         {
-            return Mapper.Map<LaboratoryModel>(labRepo.GetById(id));
+            return Mapper.Map<LaboratoryModel>(labRepo.GetById(id)).Trim();
         }
 
         public IEnumerable<LaboratoryModel> SearchLaboratory(string q)
         {
-            return Mapper.Map<LaboratoryDto[], IEnumerable<LaboratoryModel>>(labRepo.Search(q).ToArray());
+            return Mapper.Map<LaboratoryDto[], IEnumerable<LaboratoryModel>>(labRepo.Search(q).ToArray()).Select(x=> x.Trim());
         }
     }
 }

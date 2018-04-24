@@ -25,12 +25,10 @@ namespace DataContracts.Models
 
         public ICollection<AttendanceDto> Attendances { get; set; }
 
-        public ICollection<SubmissionDto> Submissions { get; set; }
 
         public LaboratoryDto()
         {
             Attendances = new HashSet<AttendanceDto>();
-            Submissions = new HashSet<SubmissionDto>();
             Assignments = new HashSet<AssignmentDto>();
         }
 

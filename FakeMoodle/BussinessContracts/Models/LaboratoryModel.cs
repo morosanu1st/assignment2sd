@@ -18,7 +18,5 @@ namespace BussinessContracts.Models
         public IEnumerable<AssignmentModel> Assignments { get; set; }
 
         public IEnumerable<AttendanceModel> Attendances { get; set; }
-
-        public IEnumerable<SubmissionModel> Submissions { get; set; }
     }
 }
