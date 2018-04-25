@@ -173,6 +173,7 @@
     <Compile Include="Controllers\Admin\AttendanceController.cs" />
     <Compile Include="Controllers\Admin\LaboratoryController.cs" />
     <Compile Include="Controllers\Admin\StudentController.cs" />
+    <Compile Include="Controllers\Admin\SubmissionController.cs" />
     <Compile Include="Controllers\User\LoginController.cs" />
     <Compile Include="Controllers\User\RegisterController.cs" />
     <Compile Include="Filters\CustomAuthFilter.cs" />

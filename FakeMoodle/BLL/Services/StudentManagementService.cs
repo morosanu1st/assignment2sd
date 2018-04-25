@@ -46,15 +46,27 @@ namespace BLL.Services
             return token;
         }
 
+        //public bool DeleteStudent(int studentId)
+        //{
+        //    var existing = userRepository.GetById(studentId);
+        //    if (existing == null)
+        //    {
+        //        return false;
+        //    }
+        //    existing.Status = 2;
+        //    userRepository.Edit(existing);
+        //    userRepository.Save();
+        //    return true;
+        //}
+
         public bool DeleteStudent(int studentId)
         {
             var existing = userRepository.GetById(studentId);
             if (existing == null)
             {
                 return false;
-            }
-            existing.Status = 2;
-            userRepository.Edit(existing);
+            }            
+            userRepository.Delete(existing);
             userRepository.Save();
             return true;
         }

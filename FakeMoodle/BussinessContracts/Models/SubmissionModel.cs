@@ -1,4 +1,6 @@
-﻿namespace BussinessContracts.Models
+﻿using System;
+
+namespace BussinessContracts.Models
 {
     public class SubmissionModel : AbstractModel
     {       

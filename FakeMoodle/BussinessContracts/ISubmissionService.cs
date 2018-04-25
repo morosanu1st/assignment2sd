@@ -17,6 +17,10 @@ namespace BussinessContracts
 
         SubmissionModel GetSubmisssion(int id);
 
+        bool EditSubmission(SubmissionModel submissionModel);
+
+        IEnumerable<SubmissionModel> GetAllSubmissions();
+
         IEnumerable<SubmissionModel> GetSubmissionByAssignment(int assignmentId);
 
         IEnumerable<SubmissionModel> GetSubmissionByStudent(int studentId);

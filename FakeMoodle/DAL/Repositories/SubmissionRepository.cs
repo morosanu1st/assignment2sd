@@ -24,7 +24,7 @@ namespace DAL.Repositories
 
         public SubmissionDto GetSpecificSubmission(UserDto s, AssignmentDto a)
         {
-            return Context.Submissions.Include(x => x.Student).Include(x => x.Assignment).Where(x => x.StudentId == s.Id&&x.AssignmentId==a.Id).FirstOrDefault();
+            return Context.Submissions.Include(x => x.Student).Include(x => x.Assignment).Where(x => x.StudentId == s.Id && x.AssignmentId == a.Id).FirstOrDefault();
 
         }
 
