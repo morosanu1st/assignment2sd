@@ -235,3 +235,7 @@ C:\faculta\FakeMoodle\FakeMoodle\bin\BussinessContracts.dll
 C:\faculta\FakeMoodle\FakeMoodle\bin\BussinessContracts.pdb
 C:\faculta\FakeMoodle\FakeMoodle\bin\BLL.dll
 C:\faculta\FakeMoodle\FakeMoodle\bin\BLL.pdb
+E:\Faculta\SD\Assginment2\FakeMoodle\FakeMoodle\bin\BussinessContracts.dll
+E:\Faculta\SD\Assginment2\FakeMoodle\FakeMoodle\bin\BLL.dll
+E:\Faculta\SD\Assginment2\FakeMoodle\FakeMoodle\bin\BussinessContracts.pdb
+E:\Faculta\SD\Assginment2\FakeMoodle\FakeMoodle\bin\BLL.pdb

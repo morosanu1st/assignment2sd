@@ -49,3 +49,8 @@ C:\faculta\FakeMoodle\DAL\obj\Debug\DAL.Migrations.userModelUpdate.resources
 C:\faculta\FakeMoodle\DAL\obj\Debug\DAL.Migrations.userModelUpdate1.resources
 C:\faculta\FakeMoodle\DAL\obj\Debug\DAL.Migrations.EnumerableToCollecction.resources
 C:\faculta\FakeMoodle\DAL\obj\Debug\DAL.Migrations.RemovedSubmissionFromLab.resources
+E:\Faculta\SD\Assginment2\FakeMoodle\DAL\obj\Debug\DAL.Migrations.addedDate.resources
+E:\Faculta\SD\Assginment2\FakeMoodle\DAL\obj\Debug\DAL.Migrations.userModelUpdate.resources
+E:\Faculta\SD\Assginment2\FakeMoodle\DAL\obj\Debug\DAL.Migrations.userModelUpdate1.resources
+E:\Faculta\SD\Assginment2\FakeMoodle\DAL\obj\Debug\DAL.Migrations.EnumerableToCollecction.resources
+E:\Faculta\SD\Assginment2\FakeMoodle\DAL\obj\Debug\DAL.Migrations.RemovedSubmissionFromLab.resources
