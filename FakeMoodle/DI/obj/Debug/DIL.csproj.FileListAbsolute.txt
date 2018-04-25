@@ -138,3 +138,9 @@ C:\faculta\FakeMoodle\DI\bin\Debug\BussinessContracts.pdb
 C:\faculta\FakeMoodle\DI\bin\Debug\AutoMapper.xml
 C:\faculta\FakeMoodle\DI\bin\Debug\BLL.dll
 C:\faculta\FakeMoodle\DI\bin\Debug\BLL.pdb
+E:\Faculta\SD\Assginment2\FakeMoodle\DI\bin\Debug\AutoMapper.dll
+E:\Faculta\SD\Assginment2\FakeMoodle\DI\bin\Debug\BLL.dll
+E:\Faculta\SD\Assginment2\FakeMoodle\DI\bin\Debug\BussinessContracts.dll
+E:\Faculta\SD\Assginment2\FakeMoodle\DI\bin\Debug\BLL.pdb
+E:\Faculta\SD\Assginment2\FakeMoodle\DI\bin\Debug\BussinessContracts.pdb
+E:\Faculta\SD\Assginment2\FakeMoodle\DI\bin\Debug\AutoMapper.xml

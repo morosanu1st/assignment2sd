@@ -44,11 +44,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\AssignmentExtensions.cs" />
     <Compile Include="Extensions\AttendanceExtensions.cs" />
     <Compile Include="Extensions\LaboratoryExtensions.cs" />
     <Compile Include="Extensions\UserExtensions.cs" />
     <Compile Include="Helpers\TokenGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AssignmentService.cs" />
     <Compile Include="Services\AttendanceService.cs" />
     <Compile Include="Services\AuthService.cs" />
     <Compile Include="Services\LaboratoryService.cs" />

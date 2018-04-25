@@ -9,5 +9,6 @@ namespace DataContracts
 {
     public interface IAssignmentRepository : IGenericRepository<AssignmentDto>
     {
+        IEnumerable<AssignmentDto> Search(string q);
     }
 }

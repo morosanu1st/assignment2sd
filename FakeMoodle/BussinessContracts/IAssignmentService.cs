@@ -13,9 +13,13 @@ namespace BussinessContracts
 
         void EditAssignment(AssignmentModel assignment);
 
-        void DeleteAssignment(AssignmentModel assignment);
+        void DeleteAssignment(int assignmentId);
 
         AssignmentModel GetAssignment(int id);
+
+        IEnumerable<AssignmentModel> GetAllAssignments();
+
+        IEnumerable<AssignmentModel> Search(string q);
 
         IEnumerable<AssignmentModel> GetByLaboratory(int labId);
     }
