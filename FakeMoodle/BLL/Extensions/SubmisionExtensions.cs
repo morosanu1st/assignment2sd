@@ -11,6 +11,10 @@ namespace BLL.Extensions
     {
         public static SubmissionModel Trim(this SubmissionModel submission)
         {
+            if (submission == null)
+            {
+                return null;
+            }
             submission.Assignment = submission.Assignment.Trim();
             submission.Student = submission.Student.Trim();
             return submission;

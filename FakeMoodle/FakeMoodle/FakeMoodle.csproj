@@ -174,6 +174,8 @@
     <Compile Include="Controllers\Admin\LaboratoryController.cs" />
     <Compile Include="Controllers\Admin\StudentController.cs" />
     <Compile Include="Controllers\Admin\SubmissionController.cs" />
+    <Compile Include="Controllers\User\SubmissionController.cs" />
+    <Compile Include="Controllers\User\LabController.cs" />
     <Compile Include="Controllers\User\LoginController.cs" />
     <Compile Include="Controllers\User\RegisterController.cs" />
     <Compile Include="Filters\CustomAuthFilter.cs" />
@@ -241,14 +243,6 @@
     <ProjectReference Include="..\BussinessContracts\BussinessContracts.csproj">
       <Project>{7B4E7D88-B6D0-4C6C-A206-83E058FE64D9}</Project>
       <Name>BussinessContracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{B595F629-043A-45BC-8318-8C6018E5D066}</Project>
-      <Name>DAL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataContrcts\DataContracts.csproj">
-      <Project>{EE8C9F88-F8B2-4950-B3B3-DCA6B68AFF51}</Project>
-      <Name>DataContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\DI\DIL.csproj">
       <Project>{0a6908d1-2026-4490-9a52-116a153a4326}</Project>

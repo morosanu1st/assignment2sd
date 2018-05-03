@@ -44,10 +44,9 @@ namespace BLL.Services
 
             var newSubmission = Mapper.Map<SubmissionDto>(submission);
             newSubmission.StudentId = submission.Student.Id;
-            newSubmission.AssignmentId = submission.Assignment.Id;
-            newSubmission.Student = null;
-            newSubmission.Assignment = null;
-            if (submissionRepository.GetSpecificSubmission(new UserDto { Id=submission.Student.Id}, new AssignmentDto { Id = newSubmission.Assignment.Id })!=null)
+            newSubmission.AssignmentId = submission.Assignment.Id;           
+            var existing = submissionRepository.GetSpecificSubmission(newSubmission.Student,newSubmission.Assignment);
+            if (existing!=null)
             {
                 throw new Exception("Assignment already submited");
             }
@@ -68,7 +67,18 @@ namespace BLL.Services
 
         public bool EditSubmission(SubmissionModel submissionModel)
         {
-            throw new NotImplementedException();
+            var existing = submissionRepository.GetById(submissionModel.Id);
+            if (existing == null)
+            {
+                throw new Exception("Submission not present");
+            }
+            if (existing.Attempt >= 3)
+            {
+                throw new Exception("No more attempts");
+            }
+            submissionRepository.Add(Mapper.Map<SubmissionDto>(submissionModel));
+            submissionRepository.Save();
+            return true;
         }
 
         public IEnumerable<SubmissionModel> GetAllSubmissions()
@@ -108,6 +118,7 @@ namespace BLL.Services
                 throw new Exception("invalid grade");
             }
             existing.Grade = grade;
+            submissionRepository.Edit(existing);
 
             submissionRepository.Save();
         }

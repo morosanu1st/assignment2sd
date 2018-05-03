@@ -19,7 +19,7 @@ namespace FakeMoodle.Controllers.User
         }
 
         [System.Web.Http.HttpPost]
-        public string Get([FromBody]LoginModel data)
+        public string Post([FromBody]LoginModel data)
         {
 
             return authService.Login(data.Email,PasswordHasher.HashString(data.PasswordHash));

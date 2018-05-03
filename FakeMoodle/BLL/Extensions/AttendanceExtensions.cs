@@ -15,11 +15,17 @@ namespace BLL.Extensions
             {
                 return null;
             }
-            attendance.Lab.Assignments = null;
-            attendance.Lab.Attendances = null;
-            attendance.Student.Attendances = null;
-            attendance.Student.Submissions = null;
-            attendance.Student.PasswordHash = null;
+            if (attendance.Lab != null)
+            {
+                attendance.Lab.Assignments = null;
+                attendance.Lab.Attendances = null;
+            }
+            if (attendance.Student != null)
+            {
+                attendance.Student.Attendances = null;
+                attendance.Student.Submissions = null;
+                attendance.Student.PasswordHash = null;
+            }
             return attendance;
         }
     }

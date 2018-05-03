@@ -11,6 +11,10 @@ namespace BLL.Extensions
     {
         public static LaboratoryModel Trim(this LaboratoryModel lab)
         {
+            if (lab == null)
+            {
+                return null;
+            }
             lab.Assignments = null;
             lab.Attendances = null;
             return lab;

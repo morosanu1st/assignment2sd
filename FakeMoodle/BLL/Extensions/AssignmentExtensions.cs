@@ -11,9 +11,16 @@ namespace BLL.Extensions
     {
         public static AssignmentModel Trim(this AssignmentModel assignment)
         {
-            assignment.Laboratory.Assignments = null;
-            assignment.Laboratory.Attendances = null;
-
+            if (assignment == null)
+            {
+                return null;
+            }
+            if (assignment.Laboratory != null)
+            {
+                assignment.Laboratory.Assignments = null;
+                assignment.Laboratory.Attendances = null;
+            }
+            assignment.Submissions = null;
             return assignment;
         }
     }

@@ -5,13 +5,18 @@ using System.Data.Entity;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
-using System.Text;
+using System.Data;
 using System.Threading.Tasks;
 
 namespace DAL.Repositories
 {
     public class SubmissionRepository : GenericRepository<ModelContext, SubmissionDto>, ISubmissionRepository
     {
+        public override IQueryable<SubmissionDto> GetAll()
+        {
+            return Context.Submissions.Include(x=>x.Assignment).Include(x=>x.Student);
+        }
+
         public IQueryable<SubmissionDto> GetByStudent(UserDto s)
         {
             return Context.Submissions.Include(x => x.Student).Include(x => x.Assignment).Where(x => x.StudentId == s.Id);
@@ -34,17 +39,17 @@ namespace DAL.Repositories
             if (exisiting == null)
             {
                 entity.Attempt = 1;
+                entity.Grade = 0;
+                entity.Student = null;
+                entity.Assignment = null;
                 base.Add(entity);
             }
             else
             {
-                //if (exisiting.Attempt >= Int32.Parse(ConfigurationManager.AppSettings["AllowedAttempts"]))
-                //{
-                //    throw new Exception("number of attempts exceeded");
-                //}
-                entity.Id = exisiting.Id;
-                entity.Attempt = exisiting.Attempt + 1;
-                base.Edit(entity);
+                exisiting.Remarks=entity.Remarks??exisiting.Remarks;
+                exisiting.Link = entity.Link ?? exisiting.Link;
+                exisiting.Attempt = exisiting.Attempt + 1;
+                base.Edit(exisiting);
             }
 
         }
