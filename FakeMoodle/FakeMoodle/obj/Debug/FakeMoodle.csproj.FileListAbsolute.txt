@@ -239,3 +239,11 @@ E:\Faculta\SD\Assginment2\FakeMoodle\FakeMoodle\bin\BussinessContracts.dll
 E:\Faculta\SD\Assginment2\FakeMoodle\FakeMoodle\bin\BLL.dll
 E:\Faculta\SD\Assginment2\FakeMoodle\FakeMoodle\bin\BussinessContracts.pdb
 E:\Faculta\SD\Assginment2\FakeMoodle\FakeMoodle\bin\BLL.pdb
+C:\faculta\FakeMoodle\FakeMoodle\bin\DI.dll.config
+C:\faculta\FakeMoodle\FakeMoodle\bin\DataMysql.dll
+C:\faculta\FakeMoodle\FakeMoodle\bin\MySql.Data.Entity.EF6.dll
+C:\faculta\FakeMoodle\FakeMoodle\bin\MySql.Data.dll
+C:\faculta\FakeMoodle\FakeMoodle\bin\DataMysql.pdb
+C:\faculta\FakeMoodle\FakeMoodle\bin\DataMysql.dll.config
+C:\faculta\FakeMoodle\FakeMoodle\bin\MySql.Data.Entity.EF6.xml
+C:\faculta\FakeMoodle\FakeMoodle\bin\MySql.Data.xml

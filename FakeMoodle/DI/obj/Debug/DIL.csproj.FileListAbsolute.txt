@@ -144,3 +144,10 @@ E:\Faculta\SD\Assginment2\FakeMoodle\DI\bin\Debug\BussinessContracts.dll
 E:\Faculta\SD\Assginment2\FakeMoodle\DI\bin\Debug\BLL.pdb
 E:\Faculta\SD\Assginment2\FakeMoodle\DI\bin\Debug\BussinessContracts.pdb
 E:\Faculta\SD\Assginment2\FakeMoodle\DI\bin\Debug\AutoMapper.xml
+C:\faculta\FakeMoodle\DI\bin\Debug\DataMysql.dll
+C:\faculta\FakeMoodle\DI\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\faculta\FakeMoodle\DI\bin\Debug\MySql.Data.dll
+C:\faculta\FakeMoodle\DI\bin\Debug\DataMysql.pdb
+C:\faculta\FakeMoodle\DI\bin\Debug\DataMysql.dll.config
+C:\faculta\FakeMoodle\DI\bin\Debug\MySql.Data.Entity.EF6.xml
+C:\faculta\FakeMoodle\DI\bin\Debug\MySql.Data.xml

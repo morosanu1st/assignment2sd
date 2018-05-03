@@ -117,6 +117,10 @@
       <Project>{EE8C9F88-F8B2-4950-B3B3-DCA6B68AFF51}</Project>
       <Name>DataContracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DataMysql\DataMysql.csproj">
+      <Project>{9fc533fa-e8c9-4eef-9cc8-bac066486dba}</Project>
+      <Name>DataMysql</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
