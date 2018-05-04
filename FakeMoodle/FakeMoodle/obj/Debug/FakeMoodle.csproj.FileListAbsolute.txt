@@ -247,3 +247,6 @@ C:\faculta\FakeMoodle\FakeMoodle\bin\DataMysql.pdb
 C:\faculta\FakeMoodle\FakeMoodle\bin\DataMysql.dll.config
 C:\faculta\FakeMoodle\FakeMoodle\bin\MySql.Data.Entity.EF6.xml
 C:\faculta\FakeMoodle\FakeMoodle\bin\MySql.Data.xml
+C:\faculta\FakeMoodle\FakeMoodle\bin\System.Web.Cors.dll
+C:\faculta\FakeMoodle\FakeMoodle\bin\System.Web.Http.Cors.dll
+C:\faculta\FakeMoodle\FakeMoodle\bin\System.Web.Http.Cors.xml

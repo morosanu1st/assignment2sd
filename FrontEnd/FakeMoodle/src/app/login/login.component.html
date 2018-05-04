@@ -1,0 +1,8 @@
+Allahuakbar
+<form>
+  <label>Username:</label><br/>
+<input type="text" [(ngModel)]="userModel.Email" name="email"><br/><br/>
+<label>Password:</label><br/>
+<input type="password" [(ngModel)]="userModel.PasswordHash" name="password"><br/><br/>
+<input type="button" (click)="onSubmit()" value="Login"/>
+</form>
