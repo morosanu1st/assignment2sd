@@ -30,5 +30,17 @@ namespace DataMySql.Repositories
         {
             return FindBy(x => x.Email.ToLower() == email.ToLower()).FirstOrDefault();
         }
+
+        public UserDto GetByToken(string token)
+        {
+            return FindBy(x => x.Token == token).FirstOrDefault();
+        }
+
+        public void SetToken(int id, string token)
+        {
+            var user = GetById(id);
+            if (user == null) return;
+            user.Token = token;
+        }
     }
 }

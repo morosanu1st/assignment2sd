@@ -1,16 +1,11 @@
 ﻿using BussinessContracts;
-using BussinessContracts.Models;
 using FakeMoodle.ViewModel;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Http;
-using System.Web.Mvc;
 
-namespace FakeMoodle.Controllers.User
+namespace FakeMoodle.Controllers.Auth
 {
-    [System.Web.Http.RoutePrefix("api/user/register")]
+    [System.Web.Http.RoutePrefix("api/register")]
     public class RegisterController : ApiController
     {
         private IStudentManagementService studentService;
@@ -22,8 +17,9 @@ namespace FakeMoodle.Controllers.User
             this.authService = authService;
         }
 
-        [System.Web.Http.HttpPut]
-        public string Post([FromBody]RegistrationModel data)
+        [HttpPut]
+        [Route("")]
+        public string Put([FromBody]RegistrationModel data)
         {
             try
             {

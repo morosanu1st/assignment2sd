@@ -7,8 +7,6 @@ export class AuthService {
 
   public isAuthenticated(): boolean {
     const token = localStorage['token'];
-    console.log(token);
-
     // Check whether the token is expired and return
     // true or false
     return token!="null";

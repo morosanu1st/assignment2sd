@@ -1,8 +1,34 @@
-Allahuakbar
-<form>
-  <label>Username:</label><br/>
-<input type="text" [(ngModel)]="userModel.Email" name="email"><br/><br/>
-<label>Password:</label><br/>
-<input type="password" [(ngModel)]="userModel.PasswordHash" name="password"><br/><br/>
-<input type="button" (click)="onSubmit()" value="Login"/>
-</form>
+<div style="float:left">
+  <form (submit)="login()">
+    <label>Email:</label>
+    <br/>
+    <input type="text" [(ngModel)]="userModel.Email" name="email">
+    <br/>
+    <br/>
+    <label>Password:</label>
+    <br/>
+    <input type="password" [(ngModel)]="userModel.PasswordHash" name="password">
+    <br/>
+    <br/>
+    <input type="button" (click)="login()" value="Login" />
+  </form>
+</div>
+<div style="margin-left: 20vw">
+  <form (submit)="register()">
+    <label>Email:</label>
+    <br/>
+    <input type="text" [(ngModel)]="registrationModel.Email" name="email">
+    <br/>
+    <br/>
+    <label>Password:</label>
+    <br/>
+    <input type="password" [(ngModel)]="registrationModel.PasswordHash" name="password">
+    <br/>
+    <label>Token:</label>
+    <br/>
+    <input type="text" [(ngModel)]="registrationModel.Token" name="token">
+    <br/>
+    <br/>
+    <input type="button" (click)="register()" value="Register" />
+  </form>
+</div>

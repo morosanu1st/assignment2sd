@@ -9,7 +9,7 @@ using DataContracts;
 using BLL.Helpers;
 using AutoMapper;
 using DataContracts.Models;
-using BLL.Extensions;
+using BussinessContracts.Extensions;
 
 namespace BLL.Services
 {
@@ -35,7 +35,7 @@ namespace BLL.Services
                 return null;
             }
 
-            var token = TokenGenerator.GenerateToken();
+            var token = TokenGenerator.GenerateToken(128);
             student.PasswordHash = PasswordHasher.HashString(token);
             var dto = Mapper.Map<UserDto>(student);
             dto.IsAdmin = false;

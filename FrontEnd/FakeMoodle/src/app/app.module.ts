@@ -1,41 +1,41 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
+import { appRoutes } from './routes';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { AdminGuardService as AdminGuard } from './services/admin-guard.service';
 import { AuthGuardService as AuthGuard } from './services/auth-guard.service';
 import { AuthService } from './services/auth.service';
-import { HttpClientModule } from '@angular/common/http';
-import { Http, HttpModule } from '@angular/http';
-import { LoginComponent } from './login/login.component';
+import { AssignmentsComponent } from './user-stuff/assignments/assignments.component';
+import { LaboratoriesComponent } from './user-stuff/laboratories/laboratories.component';
 
-const appRoutes: Routes = [
-  { path: 'Login', redirectTo: 'login' },
-  { path: 'login', component: LoginComponent },
-  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
-  { path: '**', redirectTo:''}
-];
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    LaboratoriesComponent,
+    AssignmentsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      appRoutes
     ),
     HttpModule
   ],
   providers: [
     AuthGuard,
     AuthService,
+    AdminGuard
   ],
   bootstrap: [AppComponent]
 })

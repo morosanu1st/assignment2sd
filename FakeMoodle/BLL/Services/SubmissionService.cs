@@ -8,7 +8,7 @@ using BussinessContracts.Models;
 using DataContracts;
 using AutoMapper;
 using DataContracts.Models;
-using BLL.Extensions;
+using BussinessContracts.Extensions;
 
 namespace BLL.Services
 {

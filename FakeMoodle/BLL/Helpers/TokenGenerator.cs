@@ -8,11 +8,11 @@ namespace BLL.Helpers
 {
     public static class TokenGenerator
     {
-        public static string GenerateToken()
+        public static string GenerateToken(int length)
         {
-            char[] ret = new char[128];
+            char[] ret = new char[length];
             Random r = new Random();
-            for(int i = 0; i < 128; i++)
+            for (int i = 0; i < length; i++)
             {
                 ret[i] = (char)(r.Next(26) + 'a');
             }

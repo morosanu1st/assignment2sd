@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using BLL.Extensions;
 using BussinessContracts;
+using BussinessContracts.Extensions;
 using BussinessContracts.Models;
 using DataContracts;
 using DataContracts.Models;

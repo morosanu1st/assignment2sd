@@ -1,4 +1,6 @@
-﻿using BussinessContracts;
+﻿using AutoMapper;
+using BLL.Helpers;
+using BussinessContracts;
 using BussinessContracts.Models;
 using DataContracts;
 using System;
@@ -31,10 +33,12 @@ namespace BLL.Services
             toRegister.PasswordHash = passwordHash;
             toRegister.Status = 1;
             userRepo.Edit(toRegister);
+            var authToken = TokenGenerator.GenerateToken(512);
+            userRepo.SetToken(toRegister.Id,authToken);
             userRepo.Save();
 
             //generate and register auth token here boiii
-            return "this is an ok token";
+            return authToken;
         }
 
         public string Login(string email, string passwordHash)
@@ -48,7 +52,29 @@ namespace BLL.Services
             {
                 return null;
             }
-            return "this is an ok token";
+            var authToken = TokenGenerator.GenerateToken(512);
+            userRepo.SetToken(toRegister.Id, authToken);
+            userRepo.Save();
+
+            //generate and register auth token here boiii
+            return authToken;
+        }
+
+        public void LogUserOut(string token)
+        {
+            var user=userRepo.GetByToken(token);
+            if (user == null)
+            {
+                throw new Exception("invlaid token");
+            }
+            user.Token = null;
+            userRepo.Edit(user);
+            userRepo.Save();
+        }
+
+        public UserModel ValidateToken(string token)
+        {
+            return Mapper.Map<UserModel>(userRepo.GetByToken(token));
         }
     }
 }

@@ -5,6 +5,9 @@ using System.Linq;
 using System.Web.Http;
 using DIL;
 using System.Web.Http.Cors;
+using FakeMoodle.Authorization;
+using System.Web.Mvc;
+using BussinessContracts;
 
 namespace FakeMoodle
 {
@@ -14,7 +17,10 @@ namespace FakeMoodle
         {
             // Web API configuration and services
             config.DependencyResolver = new UnityResolver(UnityConfig.Container);
-            config.EnableCors(new EnableCorsAttribute("*","*","*"));
+            var cors = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors(cors);
+            var v=config.DependencyResolver.GetService(typeof(IAuthService));
+            config.Filters.Add(new AuthenticationFilter((IAuthService)config.DependencyResolver.GetService(typeof(IAuthService))));
             AutoMapperConfig.Initialize();
 
             // Web API routes

@@ -10,8 +10,12 @@ namespace BussinessContracts
     public interface IAuthService
     {
 
-        string FirstLogin(string email,string token,string passwordHash);
+        string FirstLogin(string email, string token, string passwordHash);
 
         string Login(string username, string passwordHash);
+
+        UserModel ValidateToken(string token);
+
+        void LogUserOut(string token);
     }
 }

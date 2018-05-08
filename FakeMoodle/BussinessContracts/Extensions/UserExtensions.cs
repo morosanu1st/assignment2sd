@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BLL.Extensions
+namespace BussinessContracts.Extensions
 {
     public static class UserExtensions
     {
@@ -17,6 +17,7 @@ namespace BLL.Extensions
             }
             user.Attendances = null;
             user.Submissions = null;
+            user.PasswordHash = null;
             return user;
         }
     }

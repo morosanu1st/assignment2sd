@@ -30,5 +30,15 @@ namespace DAL.Repositories
         {
             return FindBy(x => x.Email.ToLower() == email.ToLower()).FirstOrDefault();
         }
+
+        public UserDto GetByToken(string token)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void SetToken(int id, string token)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -14,4 +14,6 @@ export interface UserModel {
 
     Id?:number;
 
+    IsAdmin?:boolean;
+
 }

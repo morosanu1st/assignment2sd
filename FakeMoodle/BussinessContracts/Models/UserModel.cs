@@ -23,6 +23,8 @@ namespace BussinessContracts.Models
 
         public int Status { get; set; }
 
+        public string Token { get; set; }
+
         public IEnumerable<AttendanceModel> Attendances { get; set; }
 
         public IEnumerable<SubmissionModel> Submissions { get; set; }

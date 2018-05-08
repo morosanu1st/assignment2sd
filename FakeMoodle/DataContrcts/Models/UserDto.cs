@@ -6,6 +6,7 @@ namespace DataContracts.Models
     [Table("Users")]
     public class UserDto : AbstractDto
     {
+        public string Token { get; set; }
 
         public string PasswordHash { get; set; }
 
