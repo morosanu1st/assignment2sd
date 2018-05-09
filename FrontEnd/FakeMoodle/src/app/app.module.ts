@@ -13,6 +13,7 @@ import { AuthGuardService as AuthGuard } from './services/auth-guard.service';
 import { AuthService } from './services/auth.service';
 import { AssignmentsComponent } from './user-stuff/assignments/assignments.component';
 import { LaboratoriesComponent } from './user-stuff/laboratories/laboratories.component';
+import { HeaderHelperService } from './services/header-helper.service';
 
 
 
@@ -35,7 +36,8 @@ import { LaboratoriesComponent } from './user-stuff/laboratories/laboratories.co
   providers: [
     AuthGuard,
     AuthService,
-    AdminGuard
+    AdminGuard,
+    HeaderHelperService
   ],
   bootstrap: [AppComponent]
 })

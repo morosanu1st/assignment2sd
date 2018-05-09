@@ -60,7 +60,7 @@ namespace FakeMoodle.Controllers.User
             return labService.SearchLaboratory(q);
         }
 
-        [Route("assignment/")]
+        [Route("{labId}/assignments/")]
         [HttpGet]
         public IEnumerable<AssignmentModel> GetByLab(int labId)
         {

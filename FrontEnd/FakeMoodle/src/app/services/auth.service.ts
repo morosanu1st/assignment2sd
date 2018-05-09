@@ -12,4 +12,11 @@ export class AuthService {
     return token!="null";
   }
 
+  public isAdmin():boolean{
+    const is=localStorage['admin'];
+    return is!=null;
+  }
+
+  
+
 }

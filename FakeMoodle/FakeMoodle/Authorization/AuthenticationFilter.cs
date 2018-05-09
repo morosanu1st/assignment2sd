@@ -40,13 +40,14 @@ namespace FakeMoodle.Authorization
 
             var existing = authService.ValidateToken(authorization.Parameter);
 
-            if (existing == null)
+            if (existing == null || existing.Status != 1)
             {
+
                 context.ErrorResult = new AuthenticationFailureResult("Invalid token", request);
                 return;
             }
             string[] roles = { existing.IsAdmin ? "Admin" : "Student" };
-            IPrincipal principal = new CustomPrincipal(new GenericIdentity(existing.Name), roles,existing);
+            IPrincipal principal = new CustomPrincipal(new GenericIdentity(existing.Name), roles, existing);
             context.Principal = principal;
         }
 

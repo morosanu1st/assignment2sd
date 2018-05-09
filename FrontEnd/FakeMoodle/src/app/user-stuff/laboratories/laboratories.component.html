@@ -1,3 +1,14 @@
-<p>
-  laboratories works!
-</p>
+<H1>Labs:</H1>
+<div>
+  <div *ngFor="let lab of labs">
+    <br/> Number:{{lab.Number}}
+    <br/> Title: {{lab.Title}}
+    <br/> Curricula: {{lab.Curricula}}
+    <br/> Description: {{lab.Description}}
+    <br/> <a [attr.href]="'assignments/'+lab.Id">View assignments</a>
+    <br/>
+    <br/>
+    <br/>
+  </div>
+
+</div>
