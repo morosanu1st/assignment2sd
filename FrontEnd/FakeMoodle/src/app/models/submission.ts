@@ -3,15 +3,15 @@ import { UserModel } from "./user-model";
 import { AbstractModel } from "./abstract-model";
 
 export interface SubmissionModel extends AbstractModel{       
-    Student: UserModel;
+    Student?: UserModel;
     
-    Assignment: AssignmentModel;
+    Assignment?: AssignmentModel;
 
-    Remarks: string;
+    Remarks?: string;
 
-    Link: string;
+    Link?: string;
 
-    Grade: number;
+    Grade?: number;
 
-    Attempt: number;
+    Attempt?: number;
 }

@@ -10,7 +10,7 @@ export const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'labs', component: LaboratoriesComponent, canActivate: [AuthGuard] },
-  { path: 'assignments/[labId]', component: AssignmentsComponent, canActivate: [AuthGuard] },
+  { path: 'assignments/:id', component: AssignmentsComponent, canActivate: [AuthGuard] },
   { path: 'laboratories', component: LaboratoriesComponent, canActivate: [AuthGuard] },  
   { path: '**', redirectTo: '' }
 ];

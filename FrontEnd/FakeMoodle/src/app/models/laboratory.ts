@@ -3,17 +3,17 @@ import { AssignmentModel } from "./assignment";
 import { AttendanceModel } from "./attendance";
 
 export interface LaboratoryModel extends AbstractModel{
-        Number: number;
+        Number?: number;
 
-        Title: string;
+        Title?: string;
 
-        Curricula: string;
+        Curricula?: string;
 
-        Description: string;
+        Description?: string;
 
-        Date: Date | string;
+        Date?: Date | string;
 
-        Assignments: AssignmentModel[];
+        Assignments?: AssignmentModel[];
 
-        Attendances: AttendanceModel[];
+        Attendances?: AttendanceModel[];
     }

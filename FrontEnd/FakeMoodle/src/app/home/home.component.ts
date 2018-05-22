@@ -39,6 +39,7 @@ export class HomeComponent implements OnInit {
           Id: +v.Id,
           IsAdmin: v.IsAdmin
         }
+        localStorage["loggedUser"]=this.user;
         if (this.user.IsAdmin) {
           localStorage["isAdmin"] = true;
         }

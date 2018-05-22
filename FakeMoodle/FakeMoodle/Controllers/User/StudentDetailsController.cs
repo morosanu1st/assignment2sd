@@ -12,7 +12,7 @@ using System.Web.Http;
 namespace FakeMoodle.Controllers.User
 {
     [System.Web.Http.RoutePrefix("api/user/details")]
-    [Authorize(Roles = "Student")]
+    [Authorize]
     public class StudentDetailsController : ApiController
     {
         private IStudentManagementService userService;        

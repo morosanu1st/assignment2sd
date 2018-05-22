@@ -4,6 +4,7 @@ import { Http, Request, RequestOptionsArgs, RequestOptions, ResponseContentType,
 import { Router } from '@angular/router';
 import { environment } from '../../environments/environment';
 import { RegisterModel } from '../models/register-model';
+import {Md5} from 'ts-md5/dist/md5';
 
 @Component({
   selector: 'app-login',
@@ -27,7 +28,9 @@ export class LoginComponent implements OnInit {
     var headers: Headers = new Headers();
     headers.append("Content-Type", "application/json");
     var opts: RequestOptionsArgs = { headers: headers } as RequestOptionsArgs;
-    this.http.put(environment.APIUrl + "api/Login", JSON.stringify(this.userModel), opts).subscribe(response => {
+    var body=Md5.hashStr(this.userModel.PasswordHash) as string;
+    var payload= {Email: this.userModel.Email, PasswordHash: body };
+    this.http.put(environment.APIUrl + "api/Login", JSON.stringify(payload), opts).subscribe(response => {
       if (response.text() == "null") {
         console.log("mail or password incorrect");
 
@@ -49,7 +52,13 @@ export class LoginComponent implements OnInit {
     var headers: Headers = new Headers();
     headers.append("Content-Type", "application/json");
     var opts: RequestOptionsArgs = { headers: headers } as RequestOptionsArgs;
-    this.http.put(environment.APIUrl + "api/register", JSON.stringify(this.registrationModel), opts).subscribe(response => {
+    var body=Md5.hashStr(this.registrationModel.PasswordHash) as string;
+    var payload= {Email: this.registrationModel.Email, PasswordHash: body,Token:this.registrationModel.Token };
+    this.http.put(environment.APIUrl + "api/register", JSON.stringify(payload), opts).subscribe(response => {
+      if (response.status<200||response.status>=400){
+        console.log("somethings wrong with your credentials");
+        return;
+      }
       if (response.text() == "null") {
         console.log("mail, token or password incorrect");
       }
@@ -61,7 +70,7 @@ export class LoginComponent implements OnInit {
       }
     },
       error => {
-        console.log(error.toString())
+        console.log("das ist eninen errot"+error.toString())
       });
   }
 

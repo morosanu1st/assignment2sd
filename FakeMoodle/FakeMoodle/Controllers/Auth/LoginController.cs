@@ -22,7 +22,7 @@ namespace FakeMoodle.Controllers.User
         public string Put([FromBody]LoginModel data)
         {
 
-            return authService.Login(data.Email,PasswordHasher.HashString(data.PasswordHash));
+            return authService.Login(data.Email,data.PasswordHash);
         }
     }
 }

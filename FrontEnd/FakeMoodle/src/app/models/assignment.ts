@@ -4,13 +4,13 @@ import { SubmissionModel } from "./submission";
 
 export interface AssignmentModel extends AbstractModel{
 
-    Laboratory: LaboratoryModel;
+    Laboratory?: LaboratoryModel;
 
-    Name: string;
+    Name?: string;
 
-    DueDate: Date | string;
+    DueDate?: Date | string;
 
-    Description: string;
+    Description?: string;
 
-    Submissions: SubmissionModel[];
+    Submissions?: SubmissionModel[];
 }

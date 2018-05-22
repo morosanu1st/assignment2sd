@@ -26,7 +26,7 @@ namespace BLL.Services
                 return null;
             }
             var toRegister = userRepo.GetByEmail(email);
-            if (toRegister.PasswordHash != token || toRegister.Status != 0)
+            if (toRegister?.PasswordHash != token || toRegister?.Status != 0)
             {
                 return null;
             }

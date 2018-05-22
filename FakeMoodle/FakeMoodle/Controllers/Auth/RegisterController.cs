@@ -21,9 +21,10 @@ namespace FakeMoodle.Controllers.Auth
         [Route("")]
         public string Put([FromBody]RegistrationModel data)
         {
+            var v = 0;
             try
             {
-                return authService.FirstLogin(data.Email, PasswordHasher.HashString(data.Token), PasswordHasher.HashString(data.PasswordHash));
+                return authService.FirstLogin(data.Email, PasswordHasher.HashString(data.Token), data.PasswordHash);
             }
             catch (Exception e)
             {
