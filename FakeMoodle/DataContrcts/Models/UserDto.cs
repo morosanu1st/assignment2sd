@@ -14,23 +14,9 @@ namespace DataContracts.Models
 
         public string Email { get; set; }
 
-        public string Hobby { get; set; }
+        public int Role { get; set; }
 
-        public int Group { get; set; }
-
-        public bool IsAdmin { get; set; }
-
-        public int Status { get; set; }
-
-        public ICollection<AttendanceDto> Attendances { get; set; }
-
-        public ICollection<SubmissionDto> Submissions { get; set; }
-
-        public UserDto()
-        {
-            Attendances = new HashSet<AttendanceDto>();
-            Submissions = new HashSet<SubmissionDto>();
-        }
+        public bool Status { get; set; }        
 
     }
 }

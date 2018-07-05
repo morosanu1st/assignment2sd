@@ -26,15 +26,15 @@ namespace BLL.Services
                 return null;
             }
             var toRegister = userRepo.GetByEmail(email);
-            if (toRegister?.PasswordHash != token || toRegister?.Status != 0)
+            if (toRegister == null || toRegister?.PasswordHash != token || toRegister.Status)
             {
                 return null;
             }
             toRegister.PasswordHash = passwordHash;
-            toRegister.Status = 1;
+            toRegister.Status = true;
             userRepo.Edit(toRegister);
             var authToken = TokenGenerator.GenerateToken(512);
-            userRepo.SetToken(toRegister.Id,authToken);
+            userRepo.SetToken(toRegister.Id, authToken);
             userRepo.Save();
 
             //generate and register auth token here boiii
@@ -48,21 +48,22 @@ namespace BLL.Services
                 return null;
             }
             var toRegister = userRepo.GetByEmail(email);
-            if (toRegister == null || toRegister.PasswordHash != passwordHash || toRegister.Status != 1)
+            if (toRegister == null || toRegister.PasswordHash != passwordHash || !toRegister.Status )
             {
                 return null;
             }
+
+            //generation and registration of auth token here
             var authToken = TokenGenerator.GenerateToken(512);
             userRepo.SetToken(toRegister.Id, authToken);
             userRepo.Save();
 
-            //generate and register auth token here boiii
             return authToken;
         }
 
         public void LogUserOut(string token)
         {
-            var user=userRepo.GetByToken(token);
+            var user = userRepo.GetByToken(token);
             if (user == null)
             {
                 throw new Exception("invlaid token");

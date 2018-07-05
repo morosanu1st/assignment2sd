@@ -14,9 +14,7 @@ namespace BussinessContracts.Extensions
             if(user==null)
             {
                 return null;
-            }
-            user.Attendances = null;
-            user.Submissions = null;
+            }            
             user.PasswordHash = null;
             return user;
         }

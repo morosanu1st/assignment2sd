@@ -41,17 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IAssignmentRepository.cs" />
-    <Compile Include="IAttendanceRepository.cs" />
     <Compile Include="IGenericRepository.cs" />
-    <Compile Include="ILaboratoryRepository.cs" />
-    <Compile Include="ISubmissionRepository.cs" />
     <Compile Include="IUserRepository.cs" />
     <Compile Include="Models\AbstractDto.cs" />
-    <Compile Include="Models\AssignmentDto.cs" />
-    <Compile Include="Models\SubmissionDto.cs" />
-    <Compile Include="Models\AttendanceDto.cs" />
-    <Compile Include="Models\LaboratoryDto.cs" />
     <Compile Include="Models\UserDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

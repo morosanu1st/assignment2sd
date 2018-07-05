@@ -41,22 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extensions\AssignmentExtensions.cs" />
-    <Compile Include="Extensions\AttendanceExtensions.cs" />
-    <Compile Include="Extensions\LaboratoryExtensions.cs" />
-    <Compile Include="Extensions\SubmisionExtensions.cs" />
     <Compile Include="Extensions\UserExtensions.cs" />
-    <Compile Include="IAssignmentService.cs" />
-    <Compile Include="IAttendanceService.cs" />
     <Compile Include="IAuthService.cs" />
-    <Compile Include="ILaboratoryService.cs" />
-    <Compile Include="IStudentManagementService.cs" />
-    <Compile Include="ISubmissionService.cs" />
+    <Compile Include="IUserManagementService.cs" />
     <Compile Include="Models\AbstractModel.cs" />
-    <Compile Include="Models\AssignmentModel.cs" />
-    <Compile Include="Models\AttendanceModel.cs" />
-    <Compile Include="Models\LaboratoryModel.cs" />
-    <Compile Include="Models\SubmissionModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="PasswordHasher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

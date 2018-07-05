@@ -6,9 +6,8 @@ namespace DataContracts
 {
     public interface IUserRepository : IGenericRepository<UserDto>
     {
-        UserDto GetByEmail(string username);
-        IQueryable<UserDto> GetGroup(int group);
         IQueryable<UserDto> Search(string q);
+        UserDto GetByEmail(string username);              
         UserDto GetByToken(string token);
         void SetToken(int id, string token);
     }

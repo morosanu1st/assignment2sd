@@ -10,23 +10,12 @@ using System.Threading.Tasks;
 namespace DAL.Contexts
 {
     public class ModelContext : DbContext
-    {
-        static Type type = typeof(System.Data.Entity.SqlServer.SqlProviderServices);
-
-
+    {      
         public ModelContext() : base(ConfigurationManager.AppSettings["ConnectionString"])
         {
         }
 
-        public DbSet<SubmissionDto> Submissions { get; set; }
-
-        public DbSet<UserDto> Users { get; set; }
-
-        public DbSet<AttendanceDto> Attendances { get; set; }
-
-        public DbSet<LaboratoryDto> Laboratories { get; set; }
-
-        public DbSet<AssignmentDto> Assignments { get; set; }
+        public DbSet<UserDto> Users { get; set; }       
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -8,10 +8,10 @@ namespace FakeMoodle.Controllers.Auth
     [System.Web.Http.RoutePrefix("api/register")]
     public class RegisterController : ApiController
     {
-        private IStudentManagementService studentService;
+        private IUserManagementService studentService;
         private IAuthService authService;
 
-        public RegisterController(IStudentManagementService studentService, IAuthService authService)
+        public RegisterController(IUserManagementService studentService, IAuthService authService)
         {
             this.studentService = studentService;
             this.authService = authService;

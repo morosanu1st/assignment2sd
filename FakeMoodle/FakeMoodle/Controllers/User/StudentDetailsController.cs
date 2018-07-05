@@ -15,7 +15,7 @@ namespace FakeMoodle.Controllers.User
     [Authorize]
     public class StudentDetailsController : ApiController
     {
-        private IStudentManagementService userService;        
+        private IUserManagementService userService;        
         
         [Route("")]
         public UserModel Get()

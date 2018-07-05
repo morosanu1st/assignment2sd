@@ -11,37 +11,37 @@ using System.Web.Http;
 namespace FakeMoodle.Controllers.Admin
 {
     [System.Web.Http.RoutePrefix("api/admin/student")]
-    public class StudentController : ApiController
+    public class UserController : ApiController
     {
-        private IStudentManagementService studentService;
+        private IUserManagementService studentService;
         private IAuthService authService;
 
-        public StudentController(IStudentManagementService studentService, IAuthService authService)
+        public UserController(IUserManagementService studentService, IAuthService authService)
         {
             this.studentService = studentService;
             this.authService = authService;
         }
 
 
-        // GET: api/Student
+        // GET: api/User
         [Route("")]
         public IEnumerable<UserModel> Get()
         {
-            return studentService.GetAllStudents();
+            return studentService.GetAllUsers();
         }
 
-        // GET: api/Student/5
+        // GET: api/User/5
         [Route("{id}")]
         public UserModel Get(int id)
         {
-            return studentService.GetStudent(id);
+            return studentService.GetUser(id);
         }
 
         [HttpPost]
         [Route("")]
         public string Post([FromBody]UserModel value)
         {
-            return studentService.CreateStudent(value);
+            return studentService.CreateUser(value);
         }
 
         [Route("")]
@@ -49,30 +49,22 @@ namespace FakeMoodle.Controllers.Admin
         public void Put(int id, [FromBody]UserModel value)
         {
             value.Id = id;
-            studentService.EditStudent(value);
+            studentService.EditUser(value);
         }
 
-        // DELETE: api/Student/5
+        // DELETE: api/User/5
         [Route("")]
         [HttpDelete]
         public void Delete(int id)
         {
-            studentService.DeleteStudent(id);
+            studentService.DeleteUser(id);
         }
 
         [HttpGet]
         [Route("search/{q?}")]
         public IEnumerable<UserModel> Search(string q)
         {
-            return studentService.SearchStudent(q);
-        }
-
-        [HttpGet]
-        [Route("group/{q?}")]
-        public IEnumerable<UserModel> GetGroup(int group)
-        {
-            return studentService.GetStudentsByGroup(group);
-        }
-
+            return studentService.SearchUser(q);
+        }      
     }
 }

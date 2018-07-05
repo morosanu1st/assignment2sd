@@ -15,18 +15,10 @@ namespace BussinessContracts.Models
 
         public string Email { get; set; }
 
-        public string Hobby { get; set; }
+        public int Role { get; set; }
 
-        public int Group { get; set; }
+        public bool Status { get; set; }
 
-        public bool IsAdmin { get; set; }
-
-        public int Status { get; set; }
-
-        public string Token { get; set; }
-
-        public IEnumerable<AttendanceModel> Attendances { get; set; }
-
-        public IEnumerable<SubmissionModel> Submissions { get; set; }
+        public string Token { get; set; }        
     }
 }

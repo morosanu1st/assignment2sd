@@ -3,8 +3,8 @@ using BussinessContracts;
 using DAL.Contexts;
 using DAL.Repositories;
 using DataContracts;
-using DataMySql.Contexts;
-using DataMySql.Repositories;
+using DataMy.Contexts;
+using DataMy.Repositories;
 using System;
 using Unity;
 
@@ -48,18 +48,10 @@ namespace DIL
 
             // TODO: Register your type's mappings here.
             container.RegisterType<ModelContext>();
-            container.RegisterType<MysqlContext>();
-            container.RegisterType<IUserRepository, UserRepositorySql>();
-            container.RegisterType<ISubmissionRepository, SubmissionRepositorySql>();
-            container.RegisterType<ILaboratoryRepository, LaboratoryRepositorySql>();
-            container.RegisterType<IAttendanceRepository, AttendanceRepositorySql>();
-            container.RegisterType<IAssignmentRepository, AssignmentRepositorySql>();
-            container.RegisterType<IStudentManagementService, StudentManagementService>();
+            container.RegisterType<IUserRepository, UserRepository>();           
+            container.RegisterType<IUserManagementService, UserManagementService>();
             container.RegisterType<IAuthService, AuthService>();
-            container.RegisterType<ILaboratoryService, LaboratoryService>();
-            container.RegisterType<IAttendanceService, AttendanceService>();
-            container.RegisterType<IAssignmentService, AssignmentService>();
-            container.RegisterType<ISubmissionService, SubmissionService>();
+           
         }
     }
 }

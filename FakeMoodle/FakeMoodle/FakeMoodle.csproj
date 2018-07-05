@@ -178,15 +178,9 @@
     <Compile Include="Authorization\AuthenticationFailureResult.cs" />
     <Compile Include="Authorization\AuthenticationFilter.cs" />
     <Compile Include="Authorization\CustomPrincipal.cs" />
-    <Compile Include="Controllers\Admin\AssignmentController.cs" />
-    <Compile Include="Controllers\Admin\AttendanceController.cs" />
-    <Compile Include="Controllers\Admin\LaboratoryController.cs" />
     <Compile Include="Controllers\Admin\StudentController.cs" />
-    <Compile Include="Controllers\Admin\SubmissionController.cs" />
     <Compile Include="Controllers\Auth\LogoutController.cs" />
     <Compile Include="Controllers\User\StudentDetailsController.cs" />
-    <Compile Include="Controllers\User\SubmissionController.cs" />
-    <Compile Include="Controllers\User\LabController.cs" />
     <Compile Include="Controllers\Auth\LoginController.cs" />
     <Compile Include="Controllers\Auth\RegisterController.cs" />
     <Compile Include="Filters\CustomAuthFilter.cs" />
