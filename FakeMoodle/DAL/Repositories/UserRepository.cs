@@ -24,12 +24,14 @@ namespace DAL.Repositories
 
         public UserDto GetByToken(string token)
         {
-            throw new System.NotImplementedException();
+            return FindBy(x => x.Token == token).FirstOrDefault();
         }
 
         public void SetToken(int id, string token)
         {
-            throw new System.NotImplementedException();
+            var user = GetById(id);
+            if (user == null) return;
+            user.Token = token;
         }
     }
 }

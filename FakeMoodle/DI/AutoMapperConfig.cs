@@ -16,7 +16,7 @@ namespace DIL
             Mapper.Initialize(cfg =>
             {
                 cfg.CreateMap<UserDto, UserModel>().ReverseMap();
-            }                
+            });                
         }
     }
 }

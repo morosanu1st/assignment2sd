@@ -16,3 +16,8 @@ C:\faculta\FakeMoodle\DataContrcts\obj\Debug\DataContracts.csproj.CoreCompileInp
 C:\faculta\FakeMoodle\DataContrcts\obj\Debug\DataContrcts.dll
 C:\faculta\FakeMoodle\DataContrcts\obj\Debug\DataContrcts.pdb
 C:\faculta\FakeMoodle\DataContrcts\obj\Debug\DataContracts.csprojResolveAssemblyReference.cache
+C:\Users\Magiq\Desktop\fake moodle\FakeMoodle\DataContrcts\bin\Debug\DataContrcts.dll
+C:\Users\Magiq\Desktop\fake moodle\FakeMoodle\DataContrcts\bin\Debug\DataContrcts.pdb
+C:\Users\Magiq\Desktop\fake moodle\FakeMoodle\DataContrcts\obj\Debug\DataContracts.csproj.CoreCompileInputs.cache
+C:\Users\Magiq\Desktop\fake moodle\FakeMoodle\DataContrcts\obj\Debug\DataContrcts.dll
+C:\Users\Magiq\Desktop\fake moodle\FakeMoodle\DataContrcts\obj\Debug\DataContrcts.pdb

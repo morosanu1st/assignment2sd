@@ -6,13 +6,15 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity.SqlServer;
 
 namespace DAL.Contexts
 {
     public class ModelContext : DbContext
     {      
-        public ModelContext() : base(ConfigurationManager.AppSettings["ConnectionString"])
+        public ModelContext() : base("name=DbConnectionString")
         {
+            var v = System.Data.Entity.SqlServer.SqlProviderServices.Instance;
         }
 
         public DbSet<UserDto> Users { get; set; }       
