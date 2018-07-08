@@ -1,16 +1,8 @@
 <p>
-  {{id}}
+  Lab id:{{id}}
 </p>
 <div *ngFor="let assignment of assignments" style="margin:5vh">
-  <div style="float:right;margin-right:20vw">
-    <label>Remarks:</label>
-    <input type="text" [(ngModel)]="submission.Description">
-    <br/>
-    <label>Link:</label>
-    <input type="text" [(ngModel)]="submission.Link">
-    <br/>
-    <button (click)="submit(assignment.Id)">Submit</button>
-  </div>
+  
 
   <label>Id: {{assignment.Id}}</label><br/>
   <label>Name:{{assignment.Name}}</label>
@@ -20,4 +12,15 @@
   <label>Due date:{{assignment.DueDate}}</label>
   <br/>
 
+</div>
+<div style="float:right;margin-right:20vw">
+  <label>AssignmentId:</label>
+  <input type="number" [(ngModel)]="assignmentId"><br/>
+  <label>Remarks:</label>
+  <input type="text" [(ngModel)]="submission.Remarks">
+  <br/>
+  <label>Link:</label>
+  <input type="text" [(ngModel)]="submission.Link">
+  <br/>
+  <button (click)="submit()">Submit</button>
 </div>

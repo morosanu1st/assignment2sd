@@ -4,7 +4,7 @@ import { SubmissionModel } from "./submission";
 
 export interface AssignmentModel extends AbstractModel{
 
-    Laboratory?: LaboratoryModel;
+    LaboratoryId?: number;
 
     Name?: string;
 

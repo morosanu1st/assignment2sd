@@ -19,10 +19,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     var t = localStorage.getItem("token");
-    this.user = { Email: "No User" };    
+    this.user = { Email: "No User" };
 
     var opts: RequestOptionsArgs = { headers: this.headerHelper.getHeader() } as RequestOptionsArgs;
-    this.http.get("http://localhost:65267/api/user/details", opts).subscribe(response => {
+    this.http.get(environment.APIUrl + "/api/user/details", opts).subscribe(response => {
       if (response.status / 100 == 4 || response.status / 100 == 5) {
         this.router.navigate(["/login"]);
       }
@@ -39,7 +39,7 @@ export class HomeComponent implements OnInit {
           Id: +v.Id,
           IsAdmin: v.IsAdmin
         }
-        localStorage["loggedUser"]=this.user;
+        localStorage["loggedUser"] = JSON.stringify(this.user);
         if (this.user.IsAdmin) {
           localStorage["isAdmin"] = true;
         }

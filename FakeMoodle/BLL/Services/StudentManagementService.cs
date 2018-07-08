@@ -43,6 +43,19 @@ namespace BLL.Services
             dto.Id = 0;
             userRepository.Add(dto);
             userRepository.Save();
+
+            System.Net.Mail.MailMessage message = new System.Net.Mail.MailMessage();
+            message.To.Add(student.Email);
+            message.Subject = "Registration token on fake moodle";
+            message.From = new System.Net.Mail.MailAddress("register@fakemoodle.utcn");
+            message.Body = "Your account has been created. Use the following token for the first login on the website";
+            System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient("smtp.gmail.com");
+
+            smtp.Port = 587;
+            smtp.Credentials = new System.Net.NetworkCredential("chindrism96@gmail.com", "ghitza.ro");
+            smtp.EnableSsl = true;
+
+            smtp.Send(message);
             return token;
         }
 

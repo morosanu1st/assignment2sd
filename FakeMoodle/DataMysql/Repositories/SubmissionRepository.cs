@@ -46,6 +46,10 @@ namespace DataMySql.Repositories
             }
             else
             {
+                if (exisiting.Attempt >= 3)
+                {
+                    throw new System.Exception("Maximum number of attempts reached");
+                }
                 exisiting.Remarks=entity.Remarks??exisiting.Remarks;
                 exisiting.Link = entity.Link ?? exisiting.Link;
                 exisiting.Attempt = exisiting.Attempt + 1;

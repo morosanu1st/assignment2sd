@@ -18,7 +18,7 @@ namespace BLL.Services
         private IAssignmentRepository assignmentRepository;
         private IUserRepository userRepository;
 
-        public SubmissionService(ISubmissionRepository submissionRepository,IAssignmentRepository assignmentRepository,IUserRepository userRepository)
+        public SubmissionService(ISubmissionRepository submissionRepository, IAssignmentRepository assignmentRepository, IUserRepository userRepository)
         {
             this.submissionRepository = submissionRepository;
             this.assignmentRepository = assignmentRepository;
@@ -32,8 +32,8 @@ namespace BLL.Services
             {
                 throw new Exception("Deadline has passed for this assignment");
             }
-            
-            if (assignment==null)
+
+            if (assignment == null)
             {
                 throw new Exception("the assignmwnt does not exist");
             }
@@ -44,20 +44,16 @@ namespace BLL.Services
 
             var newSubmission = Mapper.Map<SubmissionDto>(submission);
             newSubmission.StudentId = submission.Student.Id;
-            newSubmission.AssignmentId = submission.Assignment.Id;           
-            var existing = submissionRepository.GetSpecificSubmission(newSubmission.Student,newSubmission.Assignment);
-            if (existing!=null)
-            {
-                throw new Exception("Assignment already submited");
-            }
-                submissionRepository.Add(newSubmission);
+            newSubmission.AssignmentId = submission.Assignment.Id;
+            
+            submissionRepository.Add(newSubmission);
             submissionRepository.Save();
         }
 
         public void DeleteSubmission(SubmissionModel submission)
         {
             var existimg = submissionRepository.GetById(submission.Id);
-            if(existimg==null)
+            if (existimg == null)
             {
                 throw new Exception("the submission does not exist");
             }

@@ -14,6 +14,10 @@ import { AuthService } from './services/auth.service';
 import { AssignmentsComponent } from './user-stuff/assignments/assignments.component';
 import { LaboratoriesComponent } from './user-stuff/laboratories/laboratories.component';
 import { HeaderHelperService } from './services/header-helper.service';
+import { StudentManagementComponent } from './admin-stuff/student-management/student-management.component';
+import { GradingComponent } from './admin-stuff/grading/grading.component';
+import { LabManagementComponent } from './admin-stuff/lab-management/lab-management.component';
+import { AssignmentManagementComponent } from './admin-stuff/assignment-management/assignment-management.component';
 
 
 
@@ -23,7 +27,11 @@ import { HeaderHelperService } from './services/header-helper.service';
     HomeComponent,
     LoginComponent,
     LaboratoriesComponent,
-    AssignmentsComponent
+    AssignmentsComponent,
+    StudentManagementComponent,
+    GradingComponent,
+    LabManagementComponent,
+    AssignmentManagementComponent
   ],
   imports: [
     BrowserModule,

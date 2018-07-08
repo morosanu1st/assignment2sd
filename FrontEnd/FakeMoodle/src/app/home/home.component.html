@@ -1,12 +1,41 @@
 <p>
-  Ur details boii  
+  Ur details boii
 </p>
-<label>Id: </label>{{user.Id}}<br/>
-<label>Name: </label> {{user.Name}}<br/>
-<label>Email: </label> {{user.Email}}<br/>
-<label>Group:</label>{{user.Group}}<br/>
-<label>Hobby: </label> {{user.Hobby}}<br/>
-<input type="button" (click)="logout()" value="Logout"/>
-<div style="float:right;margin-right:20vw">
-  <label><a href="/laboratories">Labs</a></label>
+<label>Id: </label>{{user.Id}}
+<br/>
+<label>Name: </label> {{user.Name}}
+<br/>
+<label>Email: </label> {{user.Email}}
+<br/>
+<label>Group:</label>{{user.Group}}
+<br/>
+<label>Hobby: </label> {{user.Hobby}}
+<br/>
+<input type="button" (click)="logout()" value="Logout" />
+<div *ngIf='!user.IsAdmin'>
+  <div style="float:right;margin-right:20vw">
+    <label>
+      <a href="/laboratories">Labs</a>
+    </label>
+  </div>
+</div>
+
+<div *ngIf='user.IsAdmin'>
+  <div style="float:right;margin-right:20vw">
+    <label>
+      <a href="admin/labs">Labs</a>
+    </label>
+    <br/>
+    <label>
+      <a href="admin/students">Students</a>
+    </label>
+    <br/>
+    <label>
+      <a href="admin/grading">Grading</a>
+    </label>
+    <br/>
+    <label>
+      <a href="admin/assignments">Assignments</a>
+    </label>
+  </div>
 </div>

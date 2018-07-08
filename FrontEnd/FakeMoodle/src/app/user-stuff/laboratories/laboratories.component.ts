@@ -3,7 +3,7 @@ import { LaboratoryModel } from '../../models/laboratory';
 import { Http, RequestOptionsArgs } from '@angular/http';
 import { Router } from '@angular/router';
 import { HeaderHelperService } from '../../services/header-helper.service';
-import { environment } from '../../../environments/environment.prod';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-laboratories',

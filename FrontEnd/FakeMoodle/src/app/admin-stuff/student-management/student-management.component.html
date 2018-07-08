@@ -1,0 +1,23 @@
+<h3>Students</h3>
+<label>search: </label><input type="text" [(ngModel)]="searchCriteria" (keyup)="search()"><br/>
+
+<div *ngFor="let student of students" style="margin:3vh">
+  <label>Id:{{student.Id}}</label><br/>
+  <label>Name:{{student.Name}}</label><br/>
+  <label>Email:{{student.Email}}</label><br/>
+  <label>Group:{{student.Group}}</label><br/>
+  <label>Hobby:{{student.Hobby}}</label><br/>
+  <button (click)="deleteStudent(student.Id)">Delete</button>
+</div>
+
+<div>
+  <h4>Create new student</h4>
+  Name:<input type="text" [(ngModel)]="newStudent.Name"><br/>
+  Email:<input type="text" [(ngModel)]="newStudent.Email"><br/>
+  Group:<input type="number" [(ngModel)]="newStudent.Group"><br/>
+  Hobby:<input type="text" [(ngModel)]="newStudent.Hobby"><br/>
+  <button (click)="createStudent()">Create student</button>
+  <Label>Token:{{token}}</Label>
+</div>
+
+<a href="/">Home</a>

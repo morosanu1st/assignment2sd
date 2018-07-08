@@ -1,0 +1,48 @@
+<h3>Assignments</h3>
+<div style="float:right;margin-right:10vw">
+  <h2>Assignments: </h2>
+  <br/>
+  <div *ngFor="let lab of labs" style="margin:3vh">
+    <label>Id:{{lab.Id}}</label>
+    <br/>
+    <label>Name:{{lab.Title}}</label>
+    <br/>
+    <label>Group:{{lab.Date}}</label>
+    <br/>
+  </div>
+
+</div>
+
+<label>search: </label>
+<input type="text" [(ngModel)]="searchCriteria" (keyup)="search()">
+<br/>
+
+<div *ngFor="let Assignment of assignments" style="margin:3vh">
+  <label>Id:{{Assignment.Id}}</label>
+  <br/>
+  <label>Name:{{Assignment.Name}}</label>
+  <br/>
+  <label>DueDate:{{Assignment.DueDate}}</label>
+  <br/>
+  <label>Description:{{Assignment.Description}}</label>
+  <br/> 
+  <button (click)="deleteAssignment(Assignment.Id)">Delete</button>//
+</div>
+
+<div>
+  <h4>Create new Assignment</h4>
+  Name:
+  <input type="text" [(ngModel)]="newAssignment.Name">
+  <br/> DueDate:
+  <input type="date" [(ngModel)]="newAssignment.DueDate">
+  <br/> Description:
+  <input type="text" [(ngModel)]="newAssignment.Description">
+  <br/>Lab id:
+  <input type="number" [(ngModel)]="newAssignment.LaboratoryId">
+  <br/>
+  <button (click)="createAssignment()">Create Assignment</button>
+
+</div>
+
+
+<a href="/">Home</a>

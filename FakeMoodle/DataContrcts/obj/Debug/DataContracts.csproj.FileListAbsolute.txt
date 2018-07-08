@@ -16,3 +16,9 @@ C:\faculta\FakeMoodle\DataContrcts\obj\Debug\DataContracts.csproj.CoreCompileInp
 C:\faculta\FakeMoodle\DataContrcts\obj\Debug\DataContrcts.dll
 C:\faculta\FakeMoodle\DataContrcts\obj\Debug\DataContrcts.pdb
 C:\faculta\FakeMoodle\DataContrcts\obj\Debug\DataContracts.csprojResolveAssemblyReference.cache
+E:\Faculta\SD\assignments\FakeMoodle\DataContrcts\bin\Debug\DataContrcts.dll
+E:\Faculta\SD\assignments\FakeMoodle\DataContrcts\bin\Debug\DataContrcts.pdb
+E:\Faculta\SD\assignments\FakeMoodle\DataContrcts\obj\Debug\DataContracts.csprojResolveAssemblyReference.cache
+E:\Faculta\SD\assignments\FakeMoodle\DataContrcts\obj\Debug\DataContracts.csproj.CoreCompileInputs.cache
+E:\Faculta\SD\assignments\FakeMoodle\DataContrcts\obj\Debug\DataContrcts.dll
+E:\Faculta\SD\assignments\FakeMoodle\DataContrcts\obj\Debug\DataContrcts.pdb

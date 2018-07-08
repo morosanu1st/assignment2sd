@@ -15,6 +15,7 @@ import { UserModel } from '../../models/user-model';
 export class AssignmentsComponent implements OnInit {
   assignments: AssignmentModel[];
   submission: SubmissionModel;
+  assignmentId: number;
   apiUrl: string;
   id: number;
 
@@ -41,7 +42,26 @@ export class AssignmentsComponent implements OnInit {
     });
   }
 
-  submit(id: Number, submission: SubmissionModel) {
+  submit() {
+    let ids = this.assignments.map(x => x.Id);
+    if (ids.indexOf(this.assignmentId) < 0) {
+      window.alert("wrong assignment id");
+      return;
+    }
+    let body: SubmissionModel = {
+      Assignment: { Id: this.assignmentId },
+      Student: JSON.parse(localStorage["loggedUser"]) as UserModel,
+      Remarks: this.submission.Remarks,
+      Link: this.submission.Link
+    }
+    var v= localStorage["loggedUser"];
+    var opts: RequestOptionsArgs = { headers: this.headerHelper.getHeader() } as RequestOptionsArgs;
+    this.apiUrl = environment.APIUrl +"api/student/Submission";
+    this.http.post(this.apiUrl,body, opts).subscribe(response => {
+      window.alert("submission submitted succesfully");     
+    },error=>{
+      window.alert(error.text());
+    });
   }
 
 

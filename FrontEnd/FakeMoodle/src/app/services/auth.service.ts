@@ -13,8 +13,8 @@ export class AuthService {
   }
 
   public isAdmin():boolean{
-    const is=localStorage['admin'];
-    return is!=null;
+    const is=localStorage['isAdmin'];
+    return is;
   }
 
   

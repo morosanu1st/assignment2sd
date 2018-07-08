@@ -1,0 +1,54 @@
+<h3>Laboratorys</h3>
+<div style="float:right;margin-right:10vw">
+  <h2>Students: </h2>
+  <br/>
+  <div *ngFor="let student of students" style="margin:3vh">
+    <label>Id:{{student.Id}}</label>
+    <br/>
+    <label>Name:{{student.Name}}</label>
+    <br/>
+    <label>Group:{{student.Group}}</label>
+    <br/>
+  </div>
+
+</div>
+
+<label>search: </label>
+<input type="text" [(ngModel)]="searchCriteria" (keyup)="search()">
+<br/>
+
+<div *ngFor="let Laboratory of labs" style="margin:3vh">
+  <label>Id:{{Laboratory.Id}}</label>
+  <br/>
+  <label>Number:{{Laboratory.Number}}</label>
+  <br/>
+  <label>Title:{{Laboratory.Title}}</label>
+  <br/>
+  <label>Curricula:{{Laboratory.Curricula}}</label>
+  <br/>
+  <label>Description:{{Laboratory.Description}}</label>
+  <br/>
+  <label>Date:{{Laboratory.Date}}</label>
+  <br/>
+  <button (click)="deleteLaboratory(Laboratory.Id)">Delete</button>//
+  <input type="text" [(ngModel)]="Laboratory.attendant">
+  <Button (click)="addAttendance(Laboratory.attendant,Laboratory.Id)">Add attendance</Button>
+</div>
+
+<div>
+  <h4>Create new Laboratory</h4>
+  Title:
+  <input type="text" [(ngModel)]="newLaboratory.Title">
+  <br/> Curricula:
+  <input type="text" [(ngModel)]="newLaboratory.Curricula">
+  <br/> Description:
+  <input type="text" [(ngModel)]="newLaboratory.Description">
+  <br/> Date:
+  <input type="date" [(ngModel)]="newLaboratory.Date">
+  <br/>
+  <button (click)="createLaboratory()">Create Laboratory</button>
+
+</div>
+
+
+<a href="/">Home</a>

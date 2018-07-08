@@ -35,6 +35,8 @@ namespace BLL.Services
         public void DeleteLaboratory(int id)
         {
             labRepo.Delete(labRepo.GetById(id));
+            labRepo.Save();
+
         }
 
         public void EditLaboratory(LaboratoryModel laboratory)

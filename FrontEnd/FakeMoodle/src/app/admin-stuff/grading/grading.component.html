@@ -1,0 +1,18 @@
+<p>
+  Grading:
+</p>
+<div *ngFor="let sub of submissions" style="margin:3vh">
+  Student: {{sub.Student.Name}}
+  <br/> Assignment: {{sub.Assignment.Name}}
+  <br/> Remarks:{{sub.Remarks}}
+  <br/> Link:{{sub.Link}}
+  <br/>
+  <div *ngIf="!sub.isGraded">
+    <input type="number" [(ngModel)]="sub.Grade">
+    <button (click)="grade(sub.Id,sub.Grade)">Grade</button>
+  </div>
+  <div *ngIf="sub.isGraded">
+    Grade: {{sub.Grade}}
+    <button (click)="sub.isGraded=false">ReGrade</button>
+  </div>
+</div>
